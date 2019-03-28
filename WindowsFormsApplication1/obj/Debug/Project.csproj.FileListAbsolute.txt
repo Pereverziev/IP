@@ -1,0 +1,203 @@
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.dll
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.pdb
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Database.mdf
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.dll
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.pdb
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.pdb
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.pdb
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.pdb
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.pdb
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.pdb
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Forms.NativeLanguageSelectForm.resources
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MainApplicationForm.resources
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Data\July\STUDY\Project\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csprojResolveAssemblyReference.cache
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Forms.NativeLanguageSelectForm.resources
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.MainApplicationForm.resources
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.GenerateResource.Cache
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Database.mdf
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.dll
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.xml
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.xml
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.xml
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.pdb
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+D:\Student\Pulpit\IP\IPv2 (2)\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\MainForm.resources
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Database.mdf
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+C:\Users\VladimirPC\Desktop\IPv2\WindowsFormsApplication1\obj\Debug\NativeLanguageSelectForm.resources
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Database.mdf
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.dll
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.pdb
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.pdb
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.pdb
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.pdb
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.pdb
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.pdb
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\NativeLanguageSelectForm.resources
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\MainForm.resources
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Data\July\STUDY\Project\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Database.mdf
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.dll
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.pdb
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\NativeLanguageSelectForm.resources
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\MainForm.resources
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
