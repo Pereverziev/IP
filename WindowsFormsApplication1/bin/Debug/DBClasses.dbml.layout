@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBClasses">
+  <DataContextMoniker Name="/DBClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="27d4035d-3c15-4ba7-8f0d-f468547a9f62" absoluteBounds="6.875, 3.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBClassesDataContext/Translation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a553f814-853f-4420-8047-fefaab9533fd" absoluteBounds="6.89, 3.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="70fc0574-6473-4fe6-a16b-85b8070a4503" absoluteBounds="5.5, 1.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBClassesDataContext/Word" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6409bbb-af72-4b69-bef0-8a3c3131666e" absoluteBounds="5.515, 2.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.1875 : 3.0112939453125); (7.1875 : 3.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBClassesDataContext/Word/Word_Translation" />
+      <nodes>
+        <classShapeMoniker Id="70fc0574-6473-4fe6-a16b-85b8070a4503" />
+        <classShapeMoniker Id="27d4035d-3c15-4ba7-8f0d-f468547a9f62" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.40625 : 3.0112939453125); (7.40625 : 3.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBClassesDataContext/Word/Word_Translation1" />
+      <nodes>
+        <classShapeMoniker Id="70fc0574-6473-4fe6-a16b-85b8070a4503" />
+        <classShapeMoniker Id="27d4035d-3c15-4ba7-8f0d-f468547a9f62" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cf19fa56-2bb8-40c9-b965-2d4a43c485a6" absoluteBounds="2.625, 3.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBClassesDataContext/Language" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a637451a-12b1-4607-9f48-07961d7dc9bf" absoluteBounds="2.64, 3.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.625 : 3.125); (3.625 : 2.31814697265625); (5.5 : 2.31814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBClassesDataContext/Language/Language_Word" />
+      <nodes>
+        <classShapeMoniker Id="cf19fa56-2bb8-40c9-b965-2d4a43c485a6" />
+        <classShapeMoniker Id="70fc0574-6473-4fe6-a16b-85b8070a4503" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -33,6 +33,8 @@ partial class MainForm
             this.panel2 = new System.Windows.Forms.Panel();
             this.wordsFromDictionary = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.filterLanguageComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.selectLanguageComboBox = new System.Windows.Forms.ComboBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.insertWordTextBox = new System.Windows.Forms.TextBox();
@@ -47,8 +49,6 @@ partial class MainForm
             this.exercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.filterLanguageComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.Dictionary.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -131,6 +131,26 @@ partial class MainForm
             this.panel1.Size = new System.Drawing.Size(628, 120);
             this.panel1.TabIndex = 0;
             // 
+            // filterLanguageComboBox
+            // 
+            this.filterLanguageComboBox.FormattingEnabled = true;
+            this.filterLanguageComboBox.Items.AddRange(new object[] {
+            "All"});
+            this.filterLanguageComboBox.Location = new System.Drawing.Point(243, 81);
+            this.filterLanguageComboBox.Name = "filterLanguageComboBox";
+            this.filterLanguageComboBox.Size = new System.Drawing.Size(121, 24);
+            this.filterLanguageComboBox.TabIndex = 6;
+            this.filterLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.filterLanguageComboBox_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Show words from language(s):";
+            // 
             // selectLanguageComboBox
             // 
             this.selectLanguageComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -157,11 +177,13 @@ partial class MainForm
             // insertWordTextBox
             // 
             this.insertWordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.insertWordTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.insertWordTextBox.Location = new System.Drawing.Point(25, 43);
             this.insertWordTextBox.Name = "insertWordTextBox";
             this.insertWordTextBox.Size = new System.Drawing.Size(185, 22);
             this.insertWordTextBox.TabIndex = 0;
             this.insertWordTextBox.Text = "Type here word to insert";
+            this.insertWordTextBox.Click += new System.EventHandler(this.insertWordTextBox_Click);
             // 
             // Exercises
             // 
@@ -169,7 +191,7 @@ partial class MainForm
             this.Exercises.Location = new System.Drawing.Point(4, 9);
             this.Exercises.Name = "Exercises";
             this.Exercises.Padding = new System.Windows.Forms.Padding(3);
-            this.Exercises.Size = new System.Drawing.Size(636, 387);
+            this.Exercises.Size = new System.Drawing.Size(636, 390);
             this.Exercises.TabIndex = 1;
             this.Exercises.UseVisualStyleBackColor = true;
             // 
@@ -179,7 +201,7 @@ partial class MainForm
             this.Languages.Controls.Add(this.insertLanguageComboBox);
             this.Languages.Location = new System.Drawing.Point(4, 9);
             this.Languages.Name = "Languages";
-            this.Languages.Size = new System.Drawing.Size(633, 393);
+            this.Languages.Size = new System.Drawing.Size(636, 390);
             this.Languages.TabIndex = 3;
             this.Languages.UseVisualStyleBackColor = true;
             // 
@@ -208,7 +230,7 @@ partial class MainForm
             // 
             this.Options.Location = new System.Drawing.Point(4, 9);
             this.Options.Name = "Options";
-            this.Options.Size = new System.Drawing.Size(633, 393);
+            this.Options.Size = new System.Drawing.Size(636, 390);
             this.Options.TabIndex = 2;
             this.Options.UseVisualStyleBackColor = true;
             // 
@@ -294,26 +316,6 @@ partial class MainForm
             this.optionsToolStripMenuItem.Text = "Options";
             this.optionsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Show words from language(s):";
-            // 
-            // filterLanguageComboBox
-            // 
-            this.filterLanguageComboBox.FormattingEnabled = true;
-            this.filterLanguageComboBox.Items.AddRange(new object[] {
-            "All"});
-            this.filterLanguageComboBox.Location = new System.Drawing.Point(243, 81);
-            this.filterLanguageComboBox.Name = "filterLanguageComboBox";
-            this.filterLanguageComboBox.Size = new System.Drawing.Size(121, 24);
-            this.filterLanguageComboBox.TabIndex = 6;
-            this.filterLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.filterLanguageComboBox_SelectedIndexChanged);
             // 
             // MainForm
             // 

@@ -1,7 +1,9 @@
 ﻿using Google.Cloud.Translation.V2;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
 
@@ -15,34 +17,51 @@ public partial class MainForm : Form
     private DBClassesDataContext dataContext;
     private Language nativeLanguage;
     private IDictionary<String, String> titleToShortTitleMap;
+    private bool isInternetAccess;
 
     public MainForm()
     {
         InitializeComponent();
-        System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Programming\\Inzenyria_programowania-ce5078cd8d32.json");
-        client = TranslationClient.Create();
         dataContext = new DBClassesDataContext();
         languageService = new LanguageService(dataContext);
         wordService = new WordService(dataContext);
         translationDBservice = new TranslationDBService(dataContext);
-        googleTranslate = new TranslationAPIService(client);
         titleToShortTitleMap = new Dictionary<String, String>();
-        foreach (Google.Cloud.Translation.V2.Language language in client.ListLanguages("en"))
-        {
-            insertLanguageComboBox.Items.Add(language.Name);
-            titleToShortTitleMap.Add(language.Name, language.Code);
-        }
         selectLanguageComboBox.SelectedItem = "All"; //default
         insertLanguageComboBox.SelectedItem = "Polish"; //default
+
+        isInternetAccess = checkInternetConnection();
+        if (isInternetAccess)
+        {
+            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\julia\\Desktop\\git\\IP\\Inzenyria_programowania-ce5078cd8d32.json");
+            client = TranslationClient.Create();
+            googleTranslate = new TranslationAPIService(client);
+            foreach (Google.Cloud.Translation.V2.Language language in client.ListLanguages("en"))
+            {
+                insertLanguageComboBox.Items.Add(language.Name);
+                titleToShortTitleMap.Add(language.Name, language.Code);
+            }
+        }
+        else
+        {
+            MessageBox.Show("Looks like you don't have internet connection, you can't add words, you can only exercise them.");
+        }
     }
 
     private void MainApplicationForm_Shown(object sender, EventArgs e)
     {
         checkIfItIsFirstRun();
         ICollection<Word> wordList = wordService.getAll();
-        foreach(Word w in wordList)
+        /*foreach(Word w in wordList)
         {
             wordsFromDictionary.Items.Add(w.word1);
+            //wordsFromDictionary.Items.Add(word1 + " — " + word2);
+        }*/
+        foreach (Translation t in translationDBservice.getAll())
+        {
+            String word1 = wordService.getWordById((int)t.word_id_1);
+            String word2 = wordService.getWordById((int)t.word_id_2);
+            wordsFromDictionary.Items.Add(word1 + " — " + word2);
         }
     }
 
@@ -71,6 +90,13 @@ public partial class MainForm : Form
 
     private void AddButton_Click(object sender, EventArgs e)
     {
+        //AddButton.ForeColor = Color.Gold;
+        String translatedWordString = googleTranslate.translateWord(insertWordTextBox.Text, nativeLanguage.shortTitle);
+        if (translatedWordString.Equals(insertWordTextBox.Text))
+        {
+            MessageBox.Show("Looks like you've inserted wrong word, please add another word.");
+            return;
+        }
         Word wordToTranslate = new Word();
         wordToTranslate.word1 = insertWordTextBox.Text;
         wordToTranslate.language_id = languageService.getIdByTitle(selectLanguageComboBox.SelectedItem.ToString());
@@ -101,6 +127,12 @@ public partial class MainForm : Form
     {
         if (insertLanguageComboBox.SelectedItem != null)
         {
+            String selectedLanguage = insertLanguageComboBox.SelectedItem.ToString();
+            if (!languageService.checkIfLanguageExistsInDB(selectedLanguage))
+            {
+                MessageBox.Show("Look's like you already have that language in DB, please add another language.");
+                return;
+            }
             Language language = new Language();
             language.title = insertLanguageComboBox.SelectedItem.ToString();
             language.shortTitle = titleToShortTitleMap[language.title];
@@ -157,6 +189,29 @@ public partial class MainForm : Form
                 wordsFromDictionary.Items.Add(w.word1);
             }
         }
+    }
+    private bool checkInternetConnection()
+    {
+        try
+        {
+            Ping myPing = new Ping();
+            String host = "google.com";
+            byte[] buffer = new byte[32];
+            int timeout = 1000;
+            PingOptions pingOptions = new PingOptions();
+            PingReply reply = myPing.Send(host, timeout, buffer, pingOptions);
+            return (reply.Status == IPStatus.Success);
+        }
+        catch (Exception)
+        {
+            return false;
+        }
+    }
+
+    private void insertWordTextBox_Click(object sender, EventArgs e)
+    {
+        insertWordTextBox.Clear();
+        insertWordTextBox.ForeColor = Color.Black;
     }
 }
 

@@ -201,3 +201,47 @@ C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Pro
 C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
 C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\VladimirPC\Desktop\IPv2 (3)\IPv2\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.dll
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\NativeLanguageSelectForm.resources
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\MainForm.resources
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\DBClasses.designer.cs
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml.layout
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Database.mdf
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Database_log.ldf

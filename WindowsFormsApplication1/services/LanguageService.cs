@@ -33,5 +33,9 @@ class LanguageService
     {
         return dataContext.Languages.Where(r => r.title.Equals(title)).ToList().ElementAt(0).Id;
     }
+    public Boolean checkIfLanguageExistsInDB(String title)
+    {
+        return dataContext.Languages.Where(l => l.title == title).ToList().Count() == 0;
+    }
 }
 
