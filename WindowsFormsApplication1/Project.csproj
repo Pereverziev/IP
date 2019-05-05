@@ -101,6 +101,12 @@
       <DependentUpon>DBClasses.dbml</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="ExerciseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExerciseForm.Designer.cs">
+      <DependentUpon>ExerciseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\NativeLanguageSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="services\TranslationAPIService.cs" />
     <Compile Include="services\TranslationDBService.cs" />
     <Compile Include="services\WordService.cs" />
+    <EmbeddedResource Include="ExerciseForm.resx">
+      <DependentUpon>ExerciseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NativeLanguageSelectForm.resx">
       <DependentUpon>NativeLanguageSelectForm.cs</DependentUpon>
     </EmbeddedResource>

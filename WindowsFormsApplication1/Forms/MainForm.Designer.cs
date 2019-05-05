@@ -49,10 +49,13 @@ partial class MainForm
             this.exercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Dictionary.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Exercises.SuspendLayout();
             this.Languages.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -187,6 +190,8 @@ partial class MainForm
             // 
             // Exercises
             // 
+            this.Exercises.Controls.Add(this.button2);
+            this.Exercises.Controls.Add(this.button1);
             this.Exercises.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Exercises.Location = new System.Drawing.Point(4, 9);
             this.Exercises.Name = "Exercises";
@@ -317,6 +322,25 @@ partial class MainForm
             this.optionsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(60, 46);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 118);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(291, 46);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(151, 118);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +357,7 @@ partial class MainForm
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.Exercises.ResumeLayout(false);
             this.Languages.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -364,4 +389,6 @@ partial class MainForm
     private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.ComboBox filterLanguageComboBox;
+    private System.Windows.Forms.Button button2;
+    private System.Windows.Forms.Button button1;
 }

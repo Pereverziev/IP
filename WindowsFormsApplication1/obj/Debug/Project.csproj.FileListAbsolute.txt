@@ -245,3 +245,4 @@ C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml.layout
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Database.mdf
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ExerciseForm.resources

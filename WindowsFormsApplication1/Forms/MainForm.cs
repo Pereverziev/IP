@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
-
+using WindowsFormsApplication1;
 
 public partial class MainForm : Form
 {
@@ -212,6 +212,12 @@ public partial class MainForm : Form
     {
         insertWordTextBox.Clear();
         insertWordTextBox.ForeColor = Color.Black;
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        ExerciseForm newForm = new ExerciseForm();
+        newForm.Show();
     }
 }
 
