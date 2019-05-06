@@ -231,7 +231,6 @@ C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Tr
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
-C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\NativeLanguageSelectForm.resources
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\MainForm.resources
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
@@ -246,3 +245,4 @@ C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml.
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Database.mdf
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\bin\Debug\Database_log.ldf
 C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.ExerciseForm.resources
+C:\Users\julia\Desktop\git\IP\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache

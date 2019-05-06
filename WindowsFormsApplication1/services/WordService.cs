@@ -43,5 +43,14 @@ class WordService
     {
         return dataContext.Words.Where(w => w.Id == id).ToList().First().word1;
     }
+    public int getIdByWord(string word1)
+    {
+        //return dataContext.Words.Where(w => w.word1 == word1).ToList().First().word1;
+        return dataContext.Words.Where(w => w.word1 == word1).ToList().First().Id;
+        //return dataContext.Translations.Where(w => w.word_id_1 == id).ToList().First().Id;
+
+    }
+
+
 }
 
