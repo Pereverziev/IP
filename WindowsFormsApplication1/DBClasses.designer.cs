@@ -9,372 +9,120 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-using System.Data.Linq;
-using System.Data.Linq.Mapping;
-using System.Data;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Linq;
-using System.Linq.Expressions;
-using System.ComponentModel;
-using System;
-
-
-[global::System.Data.Linq.Mapping.DatabaseAttribute(Name = "Database")]
-public partial class DBClassesDataContext : System.Data.Linq.DataContext
+namespace WindowsFormsApplication1
 {
-
-    private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
-
+	using System.Data.Linq;
+	using System.Data.Linq.Mapping;
+	using System.Data;
+	using System.Collections.Generic;
+	using System.Reflection;
+	using System.Linq;
+	using System.Linq.Expressions;
+	using System.ComponentModel;
+	using System;
+	
+	
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Database")]
+	public partial class DBClassesDataContext : System.Data.Linq.DataContext
+	{
+		
+		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
+		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertTranslation(Translation instance);
-    partial void UpdateTranslation(Translation instance);
-    partial void DeleteTranslation(Translation instance);
     partial void InsertLanguage(Language instance);
     partial void UpdateLanguage(Language instance);
     partial void DeleteLanguage(Language instance);
+    partial void InsertTranslation(Translation instance);
+    partial void UpdateTranslation(Translation instance);
+    partial void DeleteTranslation(Translation instance);
     partial void InsertWord(Word instance);
     partial void UpdateWord(Word instance);
     partial void DeleteWord(Word instance);
+    partial void Insertapplication_setting(application_setting instance);
+    partial void Updateapplication_setting(application_setting instance);
+    partial void Deleteapplication_setting(application_setting instance);
     #endregion
-
-    public DBClassesDataContext() :
-            base(global::WindowsFormsApplication1.Properties.Settings.Default.Database1ConnectionString, mappingSource)
-    {
-        OnCreated();
-    }
-
-    public DBClassesDataContext(string connection) :
-            base(connection, mappingSource)
-    {
-        OnCreated();
-    }
-
-    public DBClassesDataContext(System.Data.IDbConnection connection) :
-            base(connection, mappingSource)
-    {
-        OnCreated();
-    }
-
-    public DBClassesDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) :
-            base(connection, mappingSource)
-    {
-        OnCreated();
-    }
-
-    public DBClassesDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) :
-            base(connection, mappingSource)
-    {
-        OnCreated();
-    }
-
-    public System.Data.Linq.Table<Translation> Translations
-    {
-        get
-        {
-            return this.GetTable<Translation>();
-        }
-    }
-
-    public System.Data.Linq.Table<Language> Languages
-    {
-        get
-        {
-            return this.GetTable<Language>();
-        }
-    }
-
-    public System.Data.Linq.Table<Word> Words
-    {
-        get
-        {
-            return this.GetTable<Word>();
-        }
-    }
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Translations")]
-public partial class Translation : INotifyPropertyChanging, INotifyPropertyChanged
-{
-
-    private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-
-    private int _Id;
-
-    private System.Nullable<int> _word_id_1;
-
-    private System.Nullable<int> _word_id_2;
-
-    private string _status;
-
-    private System.Nullable<short> _retry_count;
-
-    private System.Data.Linq.Binary _last_attempt_timestamp;
-
-    private EntityRef<Word> _Word;
-
-    private EntityRef<Word> _Word1;
-
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void Onword_id_1Changing(System.Nullable<int> value);
-    partial void Onword_id_1Changed();
-    partial void Onword_id_2Changing(System.Nullable<int> value);
-    partial void Onword_id_2Changed();
-    partial void OnstatusChanging(string value);
-    partial void OnstatusChanged();
-    partial void Onretry_countChanging(System.Nullable<short> value);
-    partial void Onretry_countChanged();
-    partial void Onlast_attempt_timestampChanging(System.Data.Linq.Binary value);
-    partial void Onlast_attempt_timestampChanged();
-    #endregion
-
-    public Translation()
-    {
-        this._Word = default(EntityRef<Word>);
-        this._Word1 = default(EntityRef<Word>);
-        OnCreated();
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true, UpdateCheck = UpdateCheck.Never)]
-    public int Id
-    {
-        get
-        {
-            return this._Id;
-        }
-        set
-        {
-            if ((this._Id != value))
-            {
-                this.OnIdChanging(value);
-                this.SendPropertyChanging();
-                this._Id = value;
-                this.SendPropertyChanged("Id");
-                this.OnIdChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_word_id_1", DbType = "Int", UpdateCheck = UpdateCheck.Never)]
-    public System.Nullable<int> word_id_1
-    {
-        get
-        {
-            return this._word_id_1;
-        }
-        set
-        {
-            if ((this._word_id_1 != value))
-            {
-                if (this._Word.HasLoadedOrAssignedValue)
-                {
-                    throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-                }
-                this.Onword_id_1Changing(value);
-                this.SendPropertyChanging();
-                this._word_id_1 = value;
-                this.SendPropertyChanged("word_id_1");
-                this.Onword_id_1Changed();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_word_id_2", DbType = "Int", UpdateCheck = UpdateCheck.Never)]
-    public System.Nullable<int> word_id_2
-    {
-        get
-        {
-            return this._word_id_2;
-        }
-        set
-        {
-            if ((this._word_id_2 != value))
-            {
-                if (this._Word1.HasLoadedOrAssignedValue)
-                {
-                    throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-                }
-                this.Onword_id_2Changing(value);
-                this.SendPropertyChanging();
-                this._word_id_2 = value;
-                this.SendPropertyChanged("word_id_2");
-                this.Onword_id_2Changed();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_status", DbType = "VarChar(25)", UpdateCheck = UpdateCheck.Never)]
-    public string status
-    {
-        get
-        {
-            return this._status;
-        }
-        set
-        {
-            if ((this._status != value))
-            {
-                this.OnstatusChanging(value);
-                this.SendPropertyChanging();
-                this._status = value;
-                this.SendPropertyChanged("status");
-                this.OnstatusChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_retry_count", DbType = "SmallInt", UpdateCheck = UpdateCheck.Never)]
-    public System.Nullable<short> retry_count
-    {
-        get
-        {
-            return this._retry_count;
-        }
-        set
-        {
-            if ((this._retry_count != value))
-            {
-                this.Onretry_countChanging(value);
-                this.SendPropertyChanging();
-                this._retry_count = value;
-                this.SendPropertyChanged("retry_count");
-                this.Onretry_countChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_last_attempt_timestamp", AutoSync = AutoSync.Always, DbType = "rowversion", IsDbGenerated = true, IsVersion = true, UpdateCheck = UpdateCheck.Never)]
-    public System.Data.Linq.Binary last_attempt_timestamp
-    {
-        get
-        {
-            return this._last_attempt_timestamp;
-        }
-        set
-        {
-            if ((this._last_attempt_timestamp != value))
-            {
-                this.Onlast_attempt_timestampChanging(value);
-                this.SendPropertyChanging();
-                this._last_attempt_timestamp = value;
-                this.SendPropertyChanged("last_attempt_timestamp");
-                this.Onlast_attempt_timestampChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Word_Translation", Storage = "_Word", ThisKey = "word_id_1", OtherKey = "Id", IsForeignKey = true)]
-    public Word Word
-    {
-        get
-        {
-            return this._Word.Entity;
-        }
-        set
-        {
-            Word previousValue = this._Word.Entity;
-            if (((previousValue != value)
-                        || (this._Word.HasLoadedOrAssignedValue == false)))
-            {
-                this.SendPropertyChanging();
-                if ((previousValue != null))
-                {
-                    this._Word.Entity = null;
-                    previousValue.Translations.Remove(this);
-                }
-                this._Word.Entity = value;
-                if ((value != null))
-                {
-                    value.Translations.Add(this);
-                    this._word_id_1 = value.Id;
-                }
-                else
-                {
-                    this._word_id_1 = default(Nullable<int>);
-                }
-                this.SendPropertyChanged("Word");
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Word_Translation1", Storage = "_Word1", ThisKey = "word_id_2", OtherKey = "Id", IsForeignKey = true)]
-    public Word Word1
-    {
-        get
-        {
-            return this._Word1.Entity;
-        }
-        set
-        {
-            Word previousValue = this._Word1.Entity;
-            if (((previousValue != value)
-                        || (this._Word1.HasLoadedOrAssignedValue == false)))
-            {
-                this.SendPropertyChanging();
-                if ((previousValue != null))
-                {
-                    this._Word1.Entity = null;
-                    previousValue.Translations1.Remove(this);
-                }
-                this._Word1.Entity = value;
-                if ((value != null))
-                {
-                    value.Translations1.Add(this);
-                    this._word_id_2 = value.Id;
-                }
-                else
-                {
-                    this._word_id_2 = default(Nullable<int>);
-                }
-                this.SendPropertyChanged("Word1");
-            }
-        }
-    }
-
-    public event PropertyChangingEventHandler PropertyChanging;
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected virtual void SendPropertyChanging()
-    {
-        if ((this.PropertyChanging != null))
-        {
-            this.PropertyChanging(this, emptyChangingEventArgs);
-        }
-    }
-
-    protected virtual void SendPropertyChanged(String propertyName)
-    {
-        if ((this.PropertyChanged != null))
-        {
-            this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Languages")]
-public partial class Language : INotifyPropertyChanging, INotifyPropertyChanged
-{
-
-    private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-
-    private int _Id;
-
-    private string _title;
-
-    private string _shortTitle;
-
-    private bool _nativeUserLanguage;
-
-    private EntitySet<Word> _Words;
-
+		
+		public DBClassesDataContext() : 
+				base(global::WindowsFormsApplication1.Properties.Settings.Default.Database1ConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public DBClassesDataContext(string connection) : 
+				base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public DBClassesDataContext(System.Data.IDbConnection connection) : 
+				base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public DBClassesDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+				base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public DBClassesDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+				base(connection, mappingSource)
+		{
+			OnCreated();
+		}
+		
+		public System.Data.Linq.Table<Language> Languages
+		{
+			get
+			{
+				return this.GetTable<Language>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Translation> Translations
+		{
+			get
+			{
+				return this.GetTable<Translation>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Word> Words
+		{
+			get
+			{
+				return this.GetTable<Word>();
+			}
+		}
+		
+		public System.Data.Linq.Table<application_setting> application_settings
+		{
+			get
+			{
+				return this.GetTable<application_setting>();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Languages")]
+	public partial class Language : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _title;
+		
+		private string _shortTitle;
+		
+		private bool _nativeUserLanguage;
+		
+		private EntitySet<Word> _Words;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -388,157 +136,421 @@ public partial class Language : INotifyPropertyChanging, INotifyPropertyChanged
     partial void OnnativeUserLanguageChanging(bool value);
     partial void OnnativeUserLanguageChanged();
     #endregion
-
-    public Language()
-    {
-        this._Words = new EntitySet<Word>(new Action<Word>(this.attach_Words), new Action<Word>(this.detach_Words));
-        OnCreated();
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
-    public int Id
-    {
-        get
-        {
-            return this._Id;
-        }
-        set
-        {
-            if ((this._Id != value))
-            {
-                this.OnIdChanging(value);
-                this.SendPropertyChanging();
-                this._Id = value;
-                this.SendPropertyChanged("Id");
-                this.OnIdChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_title", DbType = "VarChar(50) NOT NULL", CanBeNull = false)]
-    public string title
-    {
-        get
-        {
-            return this._title;
-        }
-        set
-        {
-            if ((this._title != value))
-            {
-                this.OntitleChanging(value);
-                this.SendPropertyChanging();
-                this._title = value;
-                this.SendPropertyChanged("title");
-                this.OntitleChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_shortTitle", DbType = "NChar(5) NOT NULL", CanBeNull = false)]
-    public string shortTitle
-    {
-        get
-        {
-            return this._shortTitle;
-        }
-        set
-        {
-            if ((this._shortTitle != value))
-            {
-                this.OnshortTitleChanging(value);
-                this.SendPropertyChanging();
-                this._shortTitle = value;
-                this.SendPropertyChanged("shortTitle");
-                this.OnshortTitleChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_nativeUserLanguage", DbType = "Bit NOT NULL")]
-    public bool nativeUserLanguage
-    {
-        get
-        {
-            return this._nativeUserLanguage;
-        }
-        set
-        {
-            if ((this._nativeUserLanguage != value))
-            {
-                this.OnnativeUserLanguageChanging(value);
-                this.SendPropertyChanging();
-                this._nativeUserLanguage = value;
-                this.SendPropertyChanged("nativeUserLanguage");
-                this.OnnativeUserLanguageChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Language_Word", Storage = "_Words", ThisKey = "Id", OtherKey = "language_id")]
-    public EntitySet<Word> Words
-    {
-        get
-        {
-            return this._Words;
-        }
-        set
-        {
-            this._Words.Assign(value);
-        }
-    }
-
-    public event PropertyChangingEventHandler PropertyChanging;
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected virtual void SendPropertyChanging()
-    {
-        if ((this.PropertyChanging != null))
-        {
-            this.PropertyChanging(this, emptyChangingEventArgs);
-        }
-    }
-
-    protected virtual void SendPropertyChanged(String propertyName)
-    {
-        if ((this.PropertyChanged != null))
-        {
-            this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-    private void attach_Words(Word entity)
-    {
-        this.SendPropertyChanging();
-        entity.Language = this;
-    }
-
-    private void detach_Words(Word entity)
-    {
-        this.SendPropertyChanging();
-        entity.Language = null;
-    }
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.Words")]
-public partial class Word : INotifyPropertyChanging, INotifyPropertyChanged
-{
-
-    private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-
-    private int _Id;
-
-    private string _word1;
-
-    private int _language_id;
-
-    private EntitySet<Translation> _Translations;
-
-    private EntitySet<Translation> _Translations1;
-
-    private EntityRef<Language> _Language;
-
+		
+		public Language()
+		{
+			this._Words = new EntitySet<Word>(new Action<Word>(this.attach_Words), new Action<Word>(this.detach_Words));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_title", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string title
+		{
+			get
+			{
+				return this._title;
+			}
+			set
+			{
+				if ((this._title != value))
+				{
+					this.OntitleChanging(value);
+					this.SendPropertyChanging();
+					this._title = value;
+					this.SendPropertyChanged("title");
+					this.OntitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_shortTitle", DbType="NChar(2) NOT NULL", CanBeNull=false)]
+		public string shortTitle
+		{
+			get
+			{
+				return this._shortTitle;
+			}
+			set
+			{
+				if ((this._shortTitle != value))
+				{
+					this.OnshortTitleChanging(value);
+					this.SendPropertyChanging();
+					this._shortTitle = value;
+					this.SendPropertyChanged("shortTitle");
+					this.OnshortTitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nativeUserLanguage", DbType="Bit NOT NULL")]
+		public bool nativeUserLanguage
+		{
+			get
+			{
+				return this._nativeUserLanguage;
+			}
+			set
+			{
+				if ((this._nativeUserLanguage != value))
+				{
+					this.OnnativeUserLanguageChanging(value);
+					this.SendPropertyChanging();
+					this._nativeUserLanguage = value;
+					this.SendPropertyChanged("nativeUserLanguage");
+					this.OnnativeUserLanguageChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Language_Word", Storage="_Words", ThisKey="Id", OtherKey="language_id")]
+		public EntitySet<Word> Words
+		{
+			get
+			{
+				return this._Words;
+			}
+			set
+			{
+				this._Words.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Words(Word entity)
+		{
+			this.SendPropertyChanging();
+			entity.Language = this;
+		}
+		
+		private void detach_Words(Word entity)
+		{
+			this.SendPropertyChanging();
+			entity.Language = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Translations")]
+	public partial class Translation : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _word_id_1;
+		
+		private int _word_id_2;
+		
+		private string _status;
+		
+		private short _retry_count;
+		
+		private System.Nullable<System.DateTime> _last_attempt_timestamp;
+		
+		private EntityRef<Word> _Word;
+		
+		private EntityRef<Word> _Word1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void Onword_id_1Changing(int value);
+    partial void Onword_id_1Changed();
+    partial void Onword_id_2Changing(int value);
+    partial void Onword_id_2Changed();
+    partial void OnstatusChanging(string value);
+    partial void OnstatusChanged();
+    partial void Onretry_countChanging(short value);
+    partial void Onretry_countChanged();
+    partial void Onlast_attempt_timestampChanging(System.Nullable<System.DateTime> value);
+    partial void Onlast_attempt_timestampChanged();
+    #endregion
+		
+		public Translation()
+		{
+			this._Word = default(EntityRef<Word>);
+			this._Word1 = default(EntityRef<Word>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word_id_1", DbType="Int NOT NULL")]
+		public int word_id_1
+		{
+			get
+			{
+				return this._word_id_1;
+			}
+			set
+			{
+				if ((this._word_id_1 != value))
+				{
+					if (this._Word.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onword_id_1Changing(value);
+					this.SendPropertyChanging();
+					this._word_id_1 = value;
+					this.SendPropertyChanged("word_id_1");
+					this.Onword_id_1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word_id_2", DbType="Int NOT NULL")]
+		public int word_id_2
+		{
+			get
+			{
+				return this._word_id_2;
+			}
+			set
+			{
+				if ((this._word_id_2 != value))
+				{
+					if (this._Word1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onword_id_2Changing(value);
+					this.SendPropertyChanging();
+					this._word_id_2 = value;
+					this.SendPropertyChanged("word_id_2");
+					this.Onword_id_2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="VarChar(25)")]
+		public string status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_retry_count", DbType="SmallInt NOT NULL")]
+		public short retry_count
+		{
+			get
+			{
+				return this._retry_count;
+			}
+			set
+			{
+				if ((this._retry_count != value))
+				{
+					this.Onretry_countChanging(value);
+					this.SendPropertyChanging();
+					this._retry_count = value;
+					this.SendPropertyChanged("retry_count");
+					this.Onretry_countChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_last_attempt_timestamp", DbType="Date")]
+		public System.Nullable<System.DateTime> last_attempt_timestamp
+		{
+			get
+			{
+				return this._last_attempt_timestamp;
+			}
+			set
+			{
+				if ((this._last_attempt_timestamp != value))
+				{
+					this.Onlast_attempt_timestampChanging(value);
+					this.SendPropertyChanging();
+					this._last_attempt_timestamp = value;
+					this.SendPropertyChanged("last_attempt_timestamp");
+					this.Onlast_attempt_timestampChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Word_Translation", Storage="_Word", ThisKey="word_id_1", OtherKey="Id", IsForeignKey=true)]
+		public Word Word
+		{
+			get
+			{
+				return this._Word.Entity;
+			}
+			set
+			{
+				Word previousValue = this._Word.Entity;
+				if (((previousValue != value) 
+							|| (this._Word.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Word.Entity = null;
+						previousValue.Translations.Remove(this);
+					}
+					this._Word.Entity = value;
+					if ((value != null))
+					{
+						value.Translations.Add(this);
+						this._word_id_1 = value.Id;
+					}
+					else
+					{
+						this._word_id_1 = default(int);
+					}
+					this.SendPropertyChanged("Word");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Word_Translation1", Storage="_Word1", ThisKey="word_id_2", OtherKey="Id", IsForeignKey=true)]
+		public Word Word1
+		{
+			get
+			{
+				return this._Word1.Entity;
+			}
+			set
+			{
+				Word previousValue = this._Word1.Entity;
+				if (((previousValue != value) 
+							|| (this._Word1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Word1.Entity = null;
+						previousValue.Translations1.Remove(this);
+					}
+					this._Word1.Entity = value;
+					if ((value != null))
+					{
+						value.Translations1.Add(this);
+						this._word_id_2 = value.Id;
+					}
+					else
+					{
+						this._word_id_2 = default(int);
+					}
+					this.SendPropertyChanged("Word1");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Words")]
+	public partial class Word : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _word1;
+		
+		private int _language_id;
+		
+		private EntitySet<Translation> _Translations;
+		
+		private EntitySet<Translation> _Translations1;
+		
+		private EntityRef<Language> _Language;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -550,182 +562,268 @@ public partial class Word : INotifyPropertyChanging, INotifyPropertyChanged
     partial void Onlanguage_idChanging(int value);
     partial void Onlanguage_idChanged();
     #endregion
-
-    public Word()
-    {
-        this._Translations = new EntitySet<Translation>(new Action<Translation>(this.attach_Translations), new Action<Translation>(this.detach_Translations));
-        this._Translations1 = new EntitySet<Translation>(new Action<Translation>(this.attach_Translations1), new Action<Translation>(this.detach_Translations1));
-        this._Language = default(EntityRef<Language>);
-        OnCreated();
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_Id", AutoSync = AutoSync.OnInsert, DbType = "Int NOT NULL IDENTITY", IsPrimaryKey = true, IsDbGenerated = true)]
-    public int Id
-    {
-        get
-        {
-            return this._Id;
-        }
-        set
-        {
-            if ((this._Id != value))
-            {
-                this.OnIdChanging(value);
-                this.SendPropertyChanging();
-                this._Id = value;
-                this.SendPropertyChanged("Id");
-                this.OnIdChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Name = "word", Storage = "_word1", DbType = "VarChar(40) NOT NULL", CanBeNull = false)]
-    public string word1
-    {
-        get
-        {
-            return this._word1;
-        }
-        set
-        {
-            if ((this._word1 != value))
-            {
-                this.Onword1Changing(value);
-                this.SendPropertyChanging();
-                this._word1 = value;
-                this.SendPropertyChanged("word1");
-                this.Onword1Changed();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_language_id", DbType = "Int NOT NULL")]
-    public int language_id
-    {
-        get
-        {
-            return this._language_id;
-        }
-        set
-        {
-            if ((this._language_id != value))
-            {
-                if (this._Language.HasLoadedOrAssignedValue)
-                {
-                    throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-                }
-                this.Onlanguage_idChanging(value);
-                this.SendPropertyChanging();
-                this._language_id = value;
-                this.SendPropertyChanged("language_id");
-                this.Onlanguage_idChanged();
-            }
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Word_Translation", Storage = "_Translations", ThisKey = "Id", OtherKey = "word_id_1")]
-    public EntitySet<Translation> Translations
-    {
-        get
-        {
-            return this._Translations;
-        }
-        set
-        {
-            this._Translations.Assign(value);
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Word_Translation1", Storage = "_Translations1", ThisKey = "Id", OtherKey = "word_id_2")]
-    public EntitySet<Translation> Translations1
-    {
-        get
-        {
-            return this._Translations1;
-        }
-        set
-        {
-            this._Translations1.Assign(value);
-        }
-    }
-
-    [global::System.Data.Linq.Mapping.AssociationAttribute(Name = "Language_Word", Storage = "_Language", ThisKey = "language_id", OtherKey = "Id", IsForeignKey = true)]
-    public Language Language
-    {
-        get
-        {
-            return this._Language.Entity;
-        }
-        set
-        {
-            Language previousValue = this._Language.Entity;
-            if (((previousValue != value)
-                        || (this._Language.HasLoadedOrAssignedValue == false)))
-            {
-                this.SendPropertyChanging();
-                if ((previousValue != null))
-                {
-                    this._Language.Entity = null;
-                    previousValue.Words.Remove(this);
-                }
-                this._Language.Entity = value;
-                if ((value != null))
-                {
-                    value.Words.Add(this);
-                    this._language_id = value.Id;
-                }
-                else
-                {
-                    this._language_id = default(int);
-                }
-                this.SendPropertyChanged("Language");
-            }
-        }
-    }
-
-    public event PropertyChangingEventHandler PropertyChanging;
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected virtual void SendPropertyChanging()
-    {
-        if ((this.PropertyChanging != null))
-        {
-            this.PropertyChanging(this, emptyChangingEventArgs);
-        }
-    }
-
-    protected virtual void SendPropertyChanged(String propertyName)
-    {
-        if ((this.PropertyChanged != null))
-        {
-            this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-    private void attach_Translations(Translation entity)
-    {
-        this.SendPropertyChanging();
-        entity.Word = this;
-    }
-
-    private void detach_Translations(Translation entity)
-    {
-        this.SendPropertyChanging();
-        entity.Word = null;
-    }
-
-    private void attach_Translations1(Translation entity)
-    {
-        this.SendPropertyChanging();
-        entity.Word1 = this;
-    }
-
-    private void detach_Translations1(Translation entity)
-    {
-        this.SendPropertyChanging();
-        entity.Word1 = null;
-    }
+		
+		public Word()
+		{
+			this._Translations = new EntitySet<Translation>(new Action<Translation>(this.attach_Translations), new Action<Translation>(this.detach_Translations));
+			this._Translations1 = new EntitySet<Translation>(new Action<Translation>(this.attach_Translations1), new Action<Translation>(this.detach_Translations1));
+			this._Language = default(EntityRef<Language>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="word", Storage="_word1", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string word1
+		{
+			get
+			{
+				return this._word1;
+			}
+			set
+			{
+				if ((this._word1 != value))
+				{
+					this.Onword1Changing(value);
+					this.SendPropertyChanging();
+					this._word1 = value;
+					this.SendPropertyChanged("word1");
+					this.Onword1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_language_id", DbType="Int NOT NULL")]
+		public int language_id
+		{
+			get
+			{
+				return this._language_id;
+			}
+			set
+			{
+				if ((this._language_id != value))
+				{
+					if (this._Language.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onlanguage_idChanging(value);
+					this.SendPropertyChanging();
+					this._language_id = value;
+					this.SendPropertyChanged("language_id");
+					this.Onlanguage_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Word_Translation", Storage="_Translations", ThisKey="Id", OtherKey="word_id_1")]
+		public EntitySet<Translation> Translations
+		{
+			get
+			{
+				return this._Translations;
+			}
+			set
+			{
+				this._Translations.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Word_Translation1", Storage="_Translations1", ThisKey="Id", OtherKey="word_id_2")]
+		public EntitySet<Translation> Translations1
+		{
+			get
+			{
+				return this._Translations1;
+			}
+			set
+			{
+				this._Translations1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Language_Word", Storage="_Language", ThisKey="language_id", OtherKey="Id", IsForeignKey=true)]
+		public Language Language
+		{
+			get
+			{
+				return this._Language.Entity;
+			}
+			set
+			{
+				Language previousValue = this._Language.Entity;
+				if (((previousValue != value) 
+							|| (this._Language.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Language.Entity = null;
+						previousValue.Words.Remove(this);
+					}
+					this._Language.Entity = value;
+					if ((value != null))
+					{
+						value.Words.Add(this);
+						this._language_id = value.Id;
+					}
+					else
+					{
+						this._language_id = default(int);
+					}
+					this.SendPropertyChanged("Language");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Translations(Translation entity)
+		{
+			this.SendPropertyChanging();
+			entity.Word = this;
+		}
+		
+		private void detach_Translations(Translation entity)
+		{
+			this.SendPropertyChanging();
+			entity.Word = null;
+		}
+		
+		private void attach_Translations1(Translation entity)
+		{
+			this.SendPropertyChanging();
+			entity.Word1 = this;
+		}
+		
+		private void detach_Translations1(Translation entity)
+		{
+			this.SendPropertyChanging();
+			entity.Word1 = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.application_settings")]
+	public partial class application_setting : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _settingName;
+		
+		private string _settingValue;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnsettingNameChanging(string value);
+    partial void OnsettingNameChanged();
+    partial void OnsettingValueChanging(string value);
+    partial void OnsettingValueChanged();
+    #endregion
+		
+		public application_setting()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_settingName", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string settingName
+		{
+			get
+			{
+				return this._settingName;
+			}
+			set
+			{
+				if ((this._settingName != value))
+				{
+					this.OnsettingNameChanging(value);
+					this.SendPropertyChanging();
+					this._settingName = value;
+					this.SendPropertyChanged("settingName");
+					this.OnsettingNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_settingValue", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string settingValue
+		{
+			get
+			{
+				return this._settingValue;
+			}
+			set
+			{
+				if ((this._settingValue != value))
+				{
+					this.OnsettingValueChanging(value);
+					this.SendPropertyChanging();
+					this._settingValue = value;
+					this.SendPropertyChanged("settingValue");
+					this.OnsettingValueChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
 }
-
 #pragma warning restore 1591

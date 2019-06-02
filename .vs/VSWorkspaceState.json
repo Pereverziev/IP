@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\WindowsFormsApplication1"
+    "\\WindowsFormsApplication1",
+    "\\WindowsFormsApplication1\\Forms",
+    "\\WindowsFormsApplication1\\services"
   ],
-  "SelectedNode": "\\WindowsFormsApplication1\\Database1_log.ldf",
+  "SelectedNode": "\\WindowsFormsApplication1\\Forms\\ExerciseForm.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -29,6 +29,15 @@ partial class MainForm
     {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
+            this.mistakeLabel3 = new System.Windows.Forms.Label();
+            this.mistakeLabel2 = new System.Windows.Forms.Label();
+            this.mistakeLabel1 = new System.Windows.Forms.Label();
+            this.wordsCounterLabel3 = new System.Windows.Forms.Label();
+            this.wordsCounterLabel2 = new System.Windows.Forms.Label();
+            this.wordsCounterLabel1 = new System.Windows.Forms.Label();
+            this.time2Label = new System.Windows.Forms.Label();
+            this.time1Label = new System.Windows.Forms.Label();
+            this.hiLabel = new System.Windows.Forms.Label();
             this.Dictionary = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.wordsFromDictionary = new System.Windows.Forms.ListBox();
@@ -39,7 +48,11 @@ partial class MainForm
             this.AddButton = new System.Windows.Forms.Button();
             this.insertWordTextBox = new System.Windows.Forms.TextBox();
             this.Exercises = new System.Windows.Forms.TabPage();
+            this.buttonConstruct = new System.Windows.Forms.Button();
+            this.buttonMatch = new System.Windows.Forms.Button();
             this.Languages = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listBoxLanguages = new System.Windows.Forms.ListBox();
             this.AddLanguageButton = new System.Windows.Forms.Button();
             this.insertLanguageComboBox = new System.Windows.Forms.ComboBox();
             this.Options = new System.Windows.Forms.TabPage();
@@ -49,9 +62,8 @@ partial class MainForm
             this.exercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.Home.SuspendLayout();
             this.Dictionary.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -73,18 +85,108 @@ partial class MainForm
             this.tabControl1.Location = new System.Drawing.Point(0, 78);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(644, 403);
+            this.tabControl1.Size = new System.Drawing.Size(669, 403);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 4;
             // 
             // Home
             // 
+            this.Home.Controls.Add(this.mistakeLabel3);
+            this.Home.Controls.Add(this.mistakeLabel2);
+            this.Home.Controls.Add(this.mistakeLabel1);
+            this.Home.Controls.Add(this.wordsCounterLabel3);
+            this.Home.Controls.Add(this.wordsCounterLabel2);
+            this.Home.Controls.Add(this.wordsCounterLabel1);
+            this.Home.Controls.Add(this.time2Label);
+            this.Home.Controls.Add(this.time1Label);
+            this.Home.Controls.Add(this.hiLabel);
             this.Home.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home.Location = new System.Drawing.Point(4, 9);
             this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(636, 390);
+            this.Home.Size = new System.Drawing.Size(661, 390);
             this.Home.TabIndex = 4;
             this.Home.UseVisualStyleBackColor = true;
+            // 
+            // mistakeLabel3
+            // 
+            this.mistakeLabel3.AutoSize = true;
+            this.mistakeLabel3.Location = new System.Drawing.Point(358, 224);
+            this.mistakeLabel3.Name = "mistakeLabel3";
+            this.mistakeLabel3.Size = new System.Drawing.Size(80, 16);
+            this.mistakeLabel3.TabIndex = 8;
+            this.mistakeLabel3.Text = "mistake(s)";
+            // 
+            // mistakeLabel2
+            // 
+            this.mistakeLabel2.AutoSize = true;
+            this.mistakeLabel2.Location = new System.Drawing.Point(290, 224);
+            this.mistakeLabel2.Name = "mistakeLabel2";
+            this.mistakeLabel2.Size = new System.Drawing.Size(51, 16);
+            this.mistakeLabel2.TabIndex = 7;
+            this.mistakeLabel2.Text = "label3";
+            // 
+            // mistakeLabel1
+            // 
+            this.mistakeLabel1.AutoSize = true;
+            this.mistakeLabel1.Location = new System.Drawing.Point(84, 224);
+            this.mistakeLabel1.Name = "mistakeLabel1";
+            this.mistakeLabel1.Size = new System.Drawing.Size(99, 16);
+            this.mistakeLabel1.TabIndex = 6;
+            this.mistakeLabel1.Text = "You\'ve made";
+            // 
+            // wordsCounterLabel3
+            // 
+            this.wordsCounterLabel3.AutoSize = true;
+            this.wordsCounterLabel3.Location = new System.Drawing.Point(358, 163);
+            this.wordsCounterLabel3.Name = "wordsCounterLabel3";
+            this.wordsCounterLabel3.Size = new System.Drawing.Size(59, 16);
+            this.wordsCounterLabel3.TabIndex = 5;
+            this.wordsCounterLabel3.Text = "word(s)";
+            // 
+            // wordsCounterLabel2
+            // 
+            this.wordsCounterLabel2.AutoSize = true;
+            this.wordsCounterLabel2.Location = new System.Drawing.Point(290, 163);
+            this.wordsCounterLabel2.Name = "wordsCounterLabel2";
+            this.wordsCounterLabel2.Size = new System.Drawing.Size(51, 16);
+            this.wordsCounterLabel2.TabIndex = 4;
+            this.wordsCounterLabel2.Text = "label3";
+            // 
+            // wordsCounterLabel1
+            // 
+            this.wordsCounterLabel1.AutoSize = true;
+            this.wordsCounterLabel1.Location = new System.Drawing.Point(84, 163);
+            this.wordsCounterLabel1.Name = "wordsCounterLabel1";
+            this.wordsCounterLabel1.Size = new System.Drawing.Size(113, 16);
+            this.wordsCounterLabel1.TabIndex = 3;
+            this.wordsCounterLabel1.Text = "You\'ve learned";
+            // 
+            // time2Label
+            // 
+            this.time2Label.AutoSize = true;
+            this.time2Label.Location = new System.Drawing.Point(379, 86);
+            this.time2Label.Name = "time2Label";
+            this.time2Label.Size = new System.Drawing.Size(51, 16);
+            this.time2Label.TabIndex = 2;
+            this.time2Label.Text = "label4";
+            // 
+            // time1Label
+            // 
+            this.time1Label.AutoSize = true;
+            this.time1Label.Location = new System.Drawing.Point(73, 86);
+            this.time1Label.Name = "time1Label";
+            this.time1Label.Size = new System.Drawing.Size(175, 16);
+            this.time1Label.TabIndex = 1;
+            this.time1Label.Text = "Last time you were here:";
+            // 
+            // hiLabel
+            // 
+            this.hiLabel.AutoSize = true;
+            this.hiLabel.Location = new System.Drawing.Point(290, 27);
+            this.hiLabel.Name = "hiLabel";
+            this.hiLabel.Size = new System.Drawing.Size(27, 16);
+            this.hiLabel.TabIndex = 0;
+            this.hiLabel.Text = "Hi!";
             // 
             // Dictionary
             // 
@@ -97,7 +199,7 @@ partial class MainForm
             this.Dictionary.Location = new System.Drawing.Point(4, 9);
             this.Dictionary.Name = "Dictionary";
             this.Dictionary.Padding = new System.Windows.Forms.Padding(3);
-            this.Dictionary.Size = new System.Drawing.Size(636, 390);
+            this.Dictionary.Size = new System.Drawing.Size(661, 390);
             this.Dictionary.TabIndex = 0;
             this.Dictionary.UseVisualStyleBackColor = true;
             // 
@@ -107,7 +209,7 @@ partial class MainForm
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 123);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(628, 262);
+            this.panel2.Size = new System.Drawing.Size(653, 262);
             this.panel2.TabIndex = 1;
             // 
             // wordsFromDictionary
@@ -118,7 +220,7 @@ partial class MainForm
             this.wordsFromDictionary.ItemHeight = 16;
             this.wordsFromDictionary.Location = new System.Drawing.Point(0, 0);
             this.wordsFromDictionary.Name = "wordsFromDictionary";
-            this.wordsFromDictionary.Size = new System.Drawing.Size(628, 262);
+            this.wordsFromDictionary.Size = new System.Drawing.Size(653, 262);
             this.wordsFromDictionary.TabIndex = 0;
             // 
             // panel1
@@ -131,7 +233,7 @@ partial class MainForm
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(628, 120);
+            this.panel1.Size = new System.Drawing.Size(653, 120);
             this.panel1.TabIndex = 0;
             // 
             // filterLanguageComboBox
@@ -190,25 +292,77 @@ partial class MainForm
             // 
             // Exercises
             // 
-            this.Exercises.Controls.Add(this.button2);
-            this.Exercises.Controls.Add(this.button1);
+            this.Exercises.Controls.Add(this.buttonConstruct);
+            this.Exercises.Controls.Add(this.buttonMatch);
             this.Exercises.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Exercises.Location = new System.Drawing.Point(4, 9);
             this.Exercises.Name = "Exercises";
             this.Exercises.Padding = new System.Windows.Forms.Padding(3);
-            this.Exercises.Size = new System.Drawing.Size(636, 390);
+            this.Exercises.Size = new System.Drawing.Size(661, 390);
             this.Exercises.TabIndex = 1;
             this.Exercises.UseVisualStyleBackColor = true;
             // 
+            // buttonConstruct
+            // 
+            this.buttonConstruct.BackColor = System.Drawing.Color.White;
+            this.buttonConstruct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonConstruct.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonConstruct.Image = global::WindowsFormsApplication1.Properties.Resources.abc_block;
+            this.buttonConstruct.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonConstruct.Location = new System.Drawing.Point(350, 46);
+            this.buttonConstruct.Name = "buttonConstruct";
+            this.buttonConstruct.Size = new System.Drawing.Size(207, 164);
+            this.buttonConstruct.TabIndex = 1;
+            this.buttonConstruct.Text = "Construct a word";
+            this.buttonConstruct.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonConstruct.UseVisualStyleBackColor = false;
+            this.buttonConstruct.Click += new System.EventHandler(this.buttonConstruct_Click);
+            // 
+            // buttonMatch
+            // 
+            this.buttonMatch.BackColor = System.Drawing.Color.White;
+            this.buttonMatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMatch.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.buttonMatch.Image = global::WindowsFormsApplication1.Properties.Resources.rating_1_;
+            this.buttonMatch.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.buttonMatch.Location = new System.Drawing.Point(55, 46);
+            this.buttonMatch.Name = "buttonMatch";
+            this.buttonMatch.Size = new System.Drawing.Size(205, 164);
+            this.buttonMatch.TabIndex = 0;
+            this.buttonMatch.Text = "Match Words";
+            this.buttonMatch.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.buttonMatch.UseVisualStyleBackColor = false;
+            this.buttonMatch.Click += new System.EventHandler(this.buttonMatch_Click);
+            // 
             // Languages
             // 
+            this.Languages.Controls.Add(this.label2);
+            this.Languages.Controls.Add(this.listBoxLanguages);
             this.Languages.Controls.Add(this.AddLanguageButton);
             this.Languages.Controls.Add(this.insertLanguageComboBox);
             this.Languages.Location = new System.Drawing.Point(4, 9);
             this.Languages.Name = "Languages";
-            this.Languages.Size = new System.Drawing.Size(636, 390);
+            this.Languages.Size = new System.Drawing.Size(661, 390);
             this.Languages.TabIndex = 3;
             this.Languages.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(179, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "List of added languages:";
+            // 
+            // listBoxLanguages
+            // 
+            this.listBoxLanguages.FormattingEnabled = true;
+            this.listBoxLanguages.ItemHeight = 16;
+            this.listBoxLanguages.Location = new System.Drawing.Point(0, 147);
+            this.listBoxLanguages.Name = "listBoxLanguages";
+            this.listBoxLanguages.Size = new System.Drawing.Size(640, 244);
+            this.listBoxLanguages.TabIndex = 2;
             // 
             // AddLanguageButton
             // 
@@ -235,7 +389,7 @@ partial class MainForm
             // 
             this.Options.Location = new System.Drawing.Point(4, 9);
             this.Options.Name = "Options";
-            this.Options.Size = new System.Drawing.Size(636, 390);
+            this.Options.Size = new System.Drawing.Size(661, 390);
             this.Options.TabIndex = 2;
             this.Options.UseVisualStyleBackColor = true;
             // 
@@ -252,7 +406,7 @@ partial class MainForm
             this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(644, 78);
+            this.menuStrip1.Size = new System.Drawing.Size(669, 78);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -322,30 +476,11 @@ partial class MainForm
             this.optionsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(60, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 118);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(291, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 118);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 481);
+            this.ClientSize = new System.Drawing.Size(669, 481);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -353,12 +488,15 @@ partial class MainForm
             this.Text = "Application";
             this.Shown += new System.EventHandler(this.MainApplicationForm_Shown);
             this.tabControl1.ResumeLayout(false);
+            this.Home.ResumeLayout(false);
+            this.Home.PerformLayout();
             this.Dictionary.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.Exercises.ResumeLayout(false);
             this.Languages.ResumeLayout(false);
+            this.Languages.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -389,6 +527,17 @@ partial class MainForm
     private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.ComboBox filterLanguageComboBox;
-    private System.Windows.Forms.Button button2;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button buttonConstruct;
+    private System.Windows.Forms.Button buttonMatch;
+    private System.Windows.Forms.ListBox listBoxLanguages;
+    private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label hiLabel;
+    private System.Windows.Forms.Label time2Label;
+    private System.Windows.Forms.Label time1Label;
+    private System.Windows.Forms.Label wordsCounterLabel3;
+    private System.Windows.Forms.Label wordsCounterLabel2;
+    private System.Windows.Forms.Label wordsCounterLabel1;
+    private System.Windows.Forms.Label mistakeLabel3;
+    private System.Windows.Forms.Label mistakeLabel2;
+    private System.Windows.Forms.Label mistakeLabel1;
 }

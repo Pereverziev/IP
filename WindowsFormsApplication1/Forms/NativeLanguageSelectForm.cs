@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using WindowsFormsApplication1;
 
 public partial class NativeLanguageSelectForm : Form
 {
@@ -19,9 +20,7 @@ public partial class NativeLanguageSelectForm : Form
         {
             comboBox1.Items.Insert(a, languageTitleArray[a]);
         }
-        //comboBox1.SelectedIndex = 0; ///default
         comboBox1.SelectedItem = "English";
-
     }
 
     private void button1_Click(object sender, EventArgs e)

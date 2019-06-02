@@ -1,11 +1,11 @@
-﻿using Google.Cloud.Translation.V2;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
 using WindowsFormsApplication1;
+using WindowsFormsApplication1.Forms;
 
 public partial class MainForm : Form
 {
@@ -13,7 +13,8 @@ public partial class MainForm : Form
     private WordService wordService;
     private TranslationDBService translationDBservice;
     private TranslationAPIService googleTranslate;
-    private TranslationClient client;
+    private ApplicationSettingsService applicationSettingsService; 
+    private Google.Cloud.Translation.V2.TranslationClient client;
     private DBClassesDataContext dataContext;
     private Language nativeLanguage;
     private IDictionary<String, String> titleToShortTitleMap;
@@ -26,6 +27,7 @@ public partial class MainForm : Form
         languageService = new LanguageService(dataContext);
         wordService = new WordService(dataContext);
         translationDBservice = new TranslationDBService(dataContext);
+        applicationSettingsService = new ApplicationSettingsService(dataContext);
         titleToShortTitleMap = new Dictionary<String, String>();
         selectLanguageComboBox.SelectedItem = "All"; //default
         insertLanguageComboBox.SelectedItem = "Polish"; //default
@@ -33,13 +35,16 @@ public partial class MainForm : Form
         isInternetAccess = checkInternetConnection();
         if (isInternetAccess)
         {
-            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Users\\julia\\Desktop\\git\\IP\\Inzenyria_programowania-ce5078cd8d32.json");
-            client = TranslationClient.Create();
+            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Programming\\Inzenyria_programowania-ce5078cd8d32.json");
+            client = Google.Cloud.Translation.V2.TranslationClient.Create();
             googleTranslate = new TranslationAPIService(client);
             foreach (Google.Cloud.Translation.V2.Language language in client.ListLanguages("en"))
             {
-                insertLanguageComboBox.Items.Add(language.Name);
-                titleToShortTitleMap.Add(language.Name, language.Code);
+                if (languageService.checkIfLanguageExistsInDB(language.Name))
+                {
+                    insertLanguageComboBox.Items.Add(language.Name);
+                    titleToShortTitleMap.Add(language.Name, language.Code);
+                }
             }
         }
         else
@@ -50,13 +55,18 @@ public partial class MainForm : Form
 
     private void MainApplicationForm_Shown(object sender, EventArgs e)
     {
+        hiLabel.Font = new Font(hiLabel.Font.FontFamily, 20);
+        time1Label.Font = new Font(time1Label.Font.FontFamily, 20);
+        time2Label.Font = new Font(time2Label.Font.FontFamily, 20);
+        wordsCounterLabel1.Font = new Font(wordsCounterLabel1.Font.FontFamily, 20);
+        wordsCounterLabel2.Font = new Font(wordsCounterLabel2.Font.FontFamily, 20);
+        wordsCounterLabel3.Font = new Font(wordsCounterLabel3.Font.FontFamily, 20);
+        mistakeLabel1.Font = new Font(mistakeLabel1.Font.FontFamily, 20);
+        mistakeLabel2.Font = new Font(mistakeLabel2.Font.FontFamily, 20);
+        mistakeLabel3.Font = new Font(mistakeLabel3.Font.FontFamily, 20);
         checkIfItIsFirstRun();
+        initializeLanguageListBox();
         ICollection<Word> wordList = wordService.getAll();
-        /*foreach(Word w in wordList)
-        {
-            wordsFromDictionary.Items.Add(w.word1);
-            //wordsFromDictionary.Items.Add(word1 + " — " + word2);
-        }*/
         foreach (Translation t in translationDBservice.getAll())
         {
             String word1 = wordService.getWordById((int)t.word_id_1);
@@ -71,6 +81,10 @@ public partial class MainForm : Form
         
         if (languageList.Count() == 0)
         {
+            time2Label.Text = "It's your first run";
+            wordsCounterLabel2.Text = "0";
+            mistakeLabel2.Text = "0";
+            applicationSettingsService.createMainRecords();
             NativeLanguageSelectForm languageSelectForm = new NativeLanguageSelectForm(this, titleToShortTitleMap);
             languageSelectForm.ShowDialog();
             nativeLanguage.nativeUserLanguage = true;
@@ -79,6 +93,7 @@ public partial class MainForm : Form
         }
         else
         {
+            setPropertiesFromDBtoLabels();
             nativeLanguage = languageService.getNativeLanguage();
             foreach (Language language in languageList)
             {
@@ -86,11 +101,19 @@ public partial class MainForm : Form
                 selectLanguageComboBox.Items.Add(language.title);
             }
         }
+        applicationSettingsService.setLastVisitTimeToNow();
+    }
+
+    private void initializeLanguageListBox()
+    {
+        foreach(Language lg in languageService.getAll())
+        {
+            listBoxLanguages.Items.Add(lg.title);
+        }
     }
 
     private void AddButton_Click(object sender, EventArgs e)
     {
-        //AddButton.ForeColor = Color.Gold;
         String translatedWordString = googleTranslate.translateWord(insertWordTextBox.Text, nativeLanguage.shortTitle);
         if (translatedWordString.Equals(insertWordTextBox.Text))
         {
@@ -115,6 +138,7 @@ public partial class MainForm : Form
         Translation t = new Translation();
         t.word_id_1 = wordToTranslate.Id;
         t.word_id_2 = translatedWord.Id;
+        t.retry_count = (Int16) applicationSettingsService.getRetryCounter(); 
         translationDBservice.create(t);
     }
 
@@ -139,6 +163,8 @@ public partial class MainForm : Form
             languageService.create(language);
             selectLanguageComboBox.Items.Add(language.title);
             filterLanguageComboBox.Items.Add(language.title);
+            listBoxLanguages.Items.Add(language.title);
+            insertLanguageComboBox.Items.Remove(insertLanguageComboBox.SelectedItem.ToString());
         }
         selectLanguageComboBox.SelectedItem = "Polish"; //default
     }
@@ -146,6 +172,8 @@ public partial class MainForm : Form
     private void homeToolStripMenuItem_Click(object sender, EventArgs e)
     {
         tabControl1.SelectedIndex = 0;
+        wordsCounterLabel2.Text = applicationSettingsService.getLearnedWordsCounter().ToString();
+        mistakeLabel2.Text = applicationSettingsService.getMistakeCounter().ToString();
     }
 
     private void dictionaryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -214,10 +242,54 @@ public partial class MainForm : Form
         insertWordTextBox.ForeColor = Color.Black;
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void buttonMatch_Click(object sender, EventArgs e)
     {
-        ExerciseForm newForm = new ExerciseForm();
+        List<Translation> translationForTestList = translationDBservice.getWordsForMatchTest();
+        if (translationForTestList.Count() < 4)
+        {
+            MessageBox.Show("You don't have words in your dictionary to exercise, please add some.");
+            return;
+        }
+        ExerciseForm newForm = new ExerciseForm(wordService, dataContext, translationDBservice, applicationSettingsService);
         newForm.Show();
+    }
+
+    private void buttonConstruct_Click(object sender, EventArgs e)
+    {
+        List<Translation> translationForTestList = translationDBservice.getWordsForMatchTest();
+        if (translationForTestList.Count() < 1)
+        {
+            MessageBox.Show("You don't have words in your dictionary to exercise, please add some.");
+            return;
+        }
+        WordConstructorForm newForm = new WordConstructorForm(wordService, dataContext, translationDBservice);
+        newForm.Show();
+    }
+
+    private String getDifferenceBetweenDays(DateTime dateTime)
+    {
+        DateTime lastVisitTime = applicationSettingsService.getLastVisitTime();
+        int minutesDifference = (lastVisitTime - DateTime.Now).Minutes;
+        if (minutesDifference < 1)
+        {
+            return "1 minute ago";
+        } else if (minutesDifference < 60)
+        {
+            return minutesDifference + "minutes ago";
+        } else if (minutesDifference < 1440)
+        {
+            return minutesDifference / 60 + "hours ago";
+        } else
+        {
+            return minutesDifference / 1440 + "days ago";
+        }
+    }
+
+    private void setPropertiesFromDBtoLabels()
+    {
+        time2Label.Text = getDifferenceBetweenDays(applicationSettingsService.getLastVisitTime());
+        wordsCounterLabel2.Text = applicationSettingsService.getLearnedWordsCounter().ToString();
+        mistakeLabel2.Text = applicationSettingsService.getMistakeCounter().ToString();
     }
 }
 

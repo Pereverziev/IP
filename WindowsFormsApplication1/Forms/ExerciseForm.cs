@@ -5,151 +5,178 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1;
 
-namespace WindowsFormsApplication1
-{
-    public partial class ExerciseForm : Form
+public partial class ExerciseForm : Form
     {
         private WordService wordService;
         private TranslationDBService translationDBservice;
-        private IDictionary<int, int> exerciseDict = new Dictionary<int, int>();
-
         private DBClassesDataContext dataContext;
-        Button[] b;
-        public ExerciseForm()
+        private ApplicationSettingsService applicationSettingsService;
+        private KeyValuePair<String, String> wordToTranslatePair;
+        private Translation rightTranslation;
+        private Timer timer;
+        private bool isClickeable = true;
+
+        public ExerciseForm(WordService wordService, DBClassesDataContext dataContext, TranslationDBService translationDBService, ApplicationSettingsService applicationSettingsService)
         {
             InitializeComponent();
 
-            dataContext = new DBClassesDataContext();
-            wordService = new WordService(dataContext);
-            translationDBservice = new TranslationDBService(dataContext);
+            this.applicationSettingsService = applicationSettingsService;
+            this.dataContext = dataContext;
+            this.wordService = wordService;
+            this.translationDBservice = translationDBService;
+            timer = new Timer();
+            timer.Interval = 3000;
+            timer.Tick += new EventHandler(setClickeable);
 
-            generating_words(4);
+            generateWords();
         }
 
-        private void checkWord(string s)
+        private void checkWord(Button clickedButton)
         {
-            //string word1 = wordButton.Text;
-            int idWordButton = wordService.getIdByWord((string)wordButton.Text);
-            int idTranslateButton = wordService.getIdByWord(s);
-            int idWordButton_T = translationDBservice.getIdTByWord(idWordButton);
-            int idTranslateButton_T = translationDBservice.getIdTByWord(idTranslateButton);
-            if (idWordButton_T == idTranslateButton_T)
+            setProperColorsOnButtons();
+            isClickeable = false;
+            timer.Enabled = true;
+            if (clickedButton.Text == wordToTranslatePair.Value)
             {
-                MessageBox.Show("Right word!!!!");
-                exerciseDict.Add(idTranslateButton_T, translationDBservice.getRetryCountTByID(idTranslateButton_T)+1);
-            }
-            else
-            {
-                exerciseDict.Add(idTranslateButton_T, translationDBservice.getRetryCountTByID(idTranslateButton_T)-1);
-                exerciseDict.Add(idWordButton_T, translationDBservice.getRetryCountTByID(idWordButton_T)-1);
-
-            }
-
-        }
-
-        private void ExerciseForm_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void generating_words(int words_count)
-        {
-            this.b = new Button[words_count];
-            //Translation t in translationDBservice.getAll()
-            /*for (int j = translationDBservice.getRecordsForExercise[]; j < words_count; j++)
-            {
-                Button bt = new Button();
-                //bt.Click += bt_Click;
-                bt.Size = new Size(160, 50);
-                bt.Location = new Point(1, j * 50);
-                this.panel1.Controls.Add(bt);
-                this.b[j] = bt;
-            }*/
-
-
-
-           
-          int j = 0;
-
-            //List<Translation> words = new List<Translation>();
-            //words = translationDBservice.getRecordsForExercise(4).ToList();
-            List<string> words = new List<string>();
-            String word1 = "";
-            //numbers.Insert(0, 666);
-            /*for(int i = 0; i<4; i++) придумать как рандомно выводить на кнопки
-            {
-
-            }
-            words.Sort()
-            words.Reverse()*/
-            foreach (Translation t in translationDBservice.getRecordsForExercise(4)) ///получение списка слов для вывода на баттн, записать в лист
-            {
-                String word2 = wordService.getWordById((int)t.word_id_2);
-                words.Add(word2);
-
-                word1 = wordService.getWordById((int)t.word_id_1);
+                rightTranslation.retry_count = (short)(rightTranslation.retry_count - 1);
                 
-
-                /*Button bt = new Button();
-                //bt.Click += bt_Click;
-                bt.Size = new Size(160, 50);
-                bt.Location = new Point(1, j * 50);
-
-                String word1 = wordService.getWordById((int)t.word_id_1);
-                wordButton.Text = word1;
-
-
-                String word2 = wordService.getWordById((int)t.word_id_2);
-                bt.Text= word2;
-                this.panel1.Controls.Add(bt);
-                this.b[j] = bt;
-                j++;
-                //bt.Items.Add(word2);*/
+            } else
+            {
+                rightTranslation.retry_count = (short)(rightTranslation.retry_count + 1);
+                applicationSettingsService.incrementMistakeCounterByOne();
             }
-            wordButton.Text = word1;
-            btTranslate1.Text = words[0];
-            btTranslate2.Text = words[1];
-            btTranslate3.Text = words[2];
-            btTranslate4.Text = words[3];
-
+            rightTranslation.last_attempt_timestamp = DateTime.Now;
+            translationDBservice.update(rightTranslation);
         }
 
-        private void btTranslate1_Click(object sender, EventArgs e)
+        private void generateWords()
         {
-            checkWord(btTranslate1.Text);
+            Random random = new Random();
+            List<Translation> translationForTestList = translationDBservice.getWordsForMatchTest();
+            if (translationForTestList.Count() < 4)
+            {
+                MessageBox.Show("You don't have words in your dictionary to exercise, please add some.");
+                this.Close();
+                return;
+            } 
+            IDictionary<String, String> wordsDictionary = new Dictionary<String, String>();
+            foreach (Translation t in translationForTestList)
+            {
+                String word1 = dataContext.Words.Where(word => word.Id == t.word_id_1).First().word1;
+                String word2 = dataContext.Words.Where(word => word.Id == t.word_id_2).First().word1;
+                wordsDictionary.Add(word1, word2);
+            }
+            Translation randomTranslation = translationForTestList.ElementAt(random.Next(0, 4));
+            while (rightTranslation != null && randomTranslation.word_id_1 == rightTranslation.word_id_1 && randomTranslation.word_id_2 == rightTranslation.word_id_2)
+            {
+                randomTranslation = translationForTestList.ElementAt(random.Next(0, 4));
+            }
+            rightTranslation = randomTranslation;
+            wordToTranslatePair = new KeyValuePair<String, String>(wordService.getWordById(rightTranslation.word_id_1), wordService.getWordById(rightTranslation.word_id_2));
+            labelWordToTranslate.Text = wordService.getWordById(rightTranslation.word_id_1);
+            setWordsOnButtons(wordsDictionary);
+        }
+
+        private void btTranslate1_Click_1(object sender, EventArgs e)
+        {
+            if (isClickeable)
+            {
+                checkWord(sender as Button);
+            }
         }
 
         private void btTranslate2_Click(object sender, EventArgs e)
         {
-            checkWord(btTranslate2.Text);
-        }
+            if (isClickeable)
+            {
+                checkWord(sender as Button);
+            }
+    }
 
         private void btTranslate3_Click(object sender, EventArgs e)
         {
-            checkWord(btTranslate3.Text);
-        }
+            if (isClickeable)
+            {
+                checkWord(sender as Button);
+            }
+    }
 
         private void btTranslate4_Click(object sender, EventArgs e)
         {
-            checkWord(btTranslate4.Text);
+            if (isClickeable)
+            {
+                checkWord(sender as Button);
+            }
+    }
+
+        private void buttonQuit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void setWordsOnButtons(IDictionary<String,String> wordsMap) 
         {
-            Translation t = new Translation();
-            foreach (KeyValuePair<int, int> i in exerciseDict)
+            btTranslate1.Text = wordsMap.ElementAt(0).Value;
+            btTranslate2.Text = wordsMap.ElementAt(1).Value;
+            btTranslate3.Text = wordsMap.ElementAt(2).Value;
+            btTranslate4.Text = wordsMap.ElementAt(3).Value;
+        }
+
+        private void setClickeable(object sender, EventArgs e)
+        {
+            isClickeable = true;
+            generateWords();
+            makeButtonsWhite();
+            timer.Enabled = false;
+        }
+
+        private void makeButtonsWhite()
+        {
+            btTranslate1.ForeColor = Color.Black;
+            btTranslate2.ForeColor = Color.Black;
+            btTranslate3.ForeColor = Color.Black;
+            btTranslate4.ForeColor = Color.Black;
+        }
+
+        private void setProperColorsOnButtons()
+        {
+            if (btTranslate1.Text == wordToTranslatePair.Value)
             {
-                t.Id = i.Key;
-                t.retry_count = (short)i.Value;
-                translationDBservice.update(t);
+                btTranslate1.ForeColor = Color.Green;
+            } else
+            {
+                //btTranslate1.BackColor = Color.Red;
+                btTranslate1.ForeColor = Color.Red;
+        }
+            if (btTranslate2.Text == wordToTranslatePair.Value)
+            {
+                btTranslate2.ForeColor = Color.Green;
             }
-            
-            ///вызов generating;
-            ///efergf
-            
+            else
+            {
+                //btTranslate2.BackColor = Color.Red;
+                btTranslate2.ForeColor = Color.Red;
+        }
+            if (btTranslate3.Text == wordToTranslatePair.Value)
+            {
+                btTranslate3.ForeColor = Color.Green;
+            }
+            else
+            {
+                btTranslate3.ForeColor = Color.Red;
+        }
+            if (btTranslate4.Text == wordToTranslatePair.Value)
+            {   
+                btTranslate4.ForeColor = Color.Green;
+            }
+            else
+            {
+                btTranslate4.ForeColor = Color.Red;
         }
     }
+
 }
+

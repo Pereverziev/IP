@@ -1,13 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="DBClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Languages" Member="Languages">
+    <Type Name="Language">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="shortTitle" Type="System.String" DbType="NChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="nativeUserLanguage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Language_Word" Member="Words" ThisKey="Id" OtherKey="language_id" Type="Word" />
+    </Type>
+  </Table>
   <Table Name="dbo.Translations" Member="Translations">
     <Type Name="Translation">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="word_id_1" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="word_id_2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="word_id_1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="word_id_2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="status" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
-      <Column Name="retry_count" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="last_attempt_timestamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="retry_count" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="last_attempt_timestamp" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="Word_Translation" Member="Word" ThisKey="word_id_1" OtherKey="Id" Type="Word" IsForeignKey="true" />
       <Association Name="Word_Translation1" Member="Word1" ThisKey="word_id_2" OtherKey="Id" Type="Word" IsForeignKey="true" />
     </Type>
@@ -22,13 +31,10 @@
       <Association Name="Language_Word" Member="Language" ThisKey="language_id" OtherKey="Id" Type="Language" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Languages" Member="Languages">
-    <Type Name="Language">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="shortTitle" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="nativeUserLanguage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Association Name="Language_Word" Member="Words" ThisKey="Id" OtherKey="language_id" Type="Word" />
+  <Table Name="dbo.application_settings" Member="application_settings">
+    <Type Name="application_setting">
+      <Column Name="settingName" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="settingValue" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using WindowsFormsApplication1;
 
-class WordService
+public class WordService
 {
     private DBClassesDataContext dataContext;
 
@@ -45,12 +46,7 @@ class WordService
     }
     public int getIdByWord(string word1)
     {
-        //return dataContext.Words.Where(w => w.word1 == word1).ToList().First().word1;
         return dataContext.Words.Where(w => w.word1 == word1).ToList().First().Id;
-        //return dataContext.Translations.Where(w => w.word_id_1 == id).ToList().First().Id;
-
     }
-
-
 }
 
