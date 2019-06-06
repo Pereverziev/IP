@@ -27,17 +27,18 @@ partial class MainForm
     /// </summary>
     private void InitializeComponent()
     {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.mistakeLabel3 = new System.Windows.Forms.Label();
+            this.hiLabel = new System.Windows.Forms.Label();
+            this.time2Label = new System.Windows.Forms.Label();
             this.mistakeLabel2 = new System.Windows.Forms.Label();
+            this.wordsCounterLabel2 = new System.Windows.Forms.Label();
+            this.time1Label = new System.Windows.Forms.Label();
+            this.wordsCounterLabel1 = new System.Windows.Forms.Label();
             this.mistakeLabel1 = new System.Windows.Forms.Label();
             this.wordsCounterLabel3 = new System.Windows.Forms.Label();
-            this.wordsCounterLabel2 = new System.Windows.Forms.Label();
-            this.wordsCounterLabel1 = new System.Windows.Forms.Label();
-            this.time2Label = new System.Windows.Forms.Label();
-            this.time1Label = new System.Windows.Forms.Label();
-            this.hiLabel = new System.Windows.Forms.Label();
             this.Dictionary = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.wordsFromDictionary = new System.Windows.Forms.ListBox();
@@ -55,13 +56,13 @@ partial class MainForm
             this.listBoxLanguages = new System.Windows.Forms.ListBox();
             this.AddLanguageButton = new System.Windows.Forms.Button();
             this.insertLanguageComboBox = new System.Windows.Forms.ComboBox();
-            this.Options = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dictionaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exercisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.languagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label42 = new System.Windows.Forms.Label();
+            this.Options = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.Home.SuspendLayout();
             this.Dictionary.SuspendLayout();
@@ -81,25 +82,29 @@ partial class MainForm
             this.tabControl1.Controls.Add(this.Options);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(132, 5);
-            this.tabControl1.Location = new System.Drawing.Point(0, 78);
+            this.tabControl1.ItemSize = new System.Drawing.Size(160, 5);
+            this.tabControl1.Location = new System.Drawing.Point(0, 75);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(669, 403);
+            this.tabControl1.Size = new System.Drawing.Size(669, 406);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 4;
             // 
             // Home
             // 
+            this.Home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Home.BackgroundImage")));
+            this.Home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Home.Controls.Add(this.label42);
             this.Home.Controls.Add(this.mistakeLabel3);
+            this.Home.Controls.Add(this.hiLabel);
+            this.Home.Controls.Add(this.time2Label);
             this.Home.Controls.Add(this.mistakeLabel2);
+            this.Home.Controls.Add(this.wordsCounterLabel2);
+            this.Home.Controls.Add(this.time1Label);
+            this.Home.Controls.Add(this.wordsCounterLabel1);
             this.Home.Controls.Add(this.mistakeLabel1);
             this.Home.Controls.Add(this.wordsCounterLabel3);
-            this.Home.Controls.Add(this.wordsCounterLabel2);
-            this.Home.Controls.Add(this.wordsCounterLabel1);
-            this.Home.Controls.Add(this.time2Label);
-            this.Home.Controls.Add(this.time1Label);
-            this.Home.Controls.Add(this.hiLabel);
+            this.Home.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Home.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Home.Location = new System.Drawing.Point(4, 9);
             this.Home.Name = "Home";
@@ -110,83 +115,101 @@ partial class MainForm
             // mistakeLabel3
             // 
             this.mistakeLabel3.AutoSize = true;
-            this.mistakeLabel3.Location = new System.Drawing.Point(358, 224);
+            this.mistakeLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mistakeLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mistakeLabel3.Location = new System.Drawing.Point(453, 196);
             this.mistakeLabel3.Name = "mistakeLabel3";
-            this.mistakeLabel3.Size = new System.Drawing.Size(80, 16);
+            this.mistakeLabel3.Size = new System.Drawing.Size(54, 13);
             this.mistakeLabel3.TabIndex = 8;
             this.mistakeLabel3.Text = "mistake(s)";
+            // 
+            // hiLabel
+            // 
+            this.hiLabel.AutoSize = true;
+            this.hiLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hiLabel.Location = new System.Drawing.Point(317, 45);
+            this.hiLabel.Name = "hiLabel";
+            this.hiLabel.Size = new System.Drawing.Size(20, 13);
+            this.hiLabel.TabIndex = 0;
+            this.hiLabel.Text = "Hi!";
+            // 
+            // time2Label
+            // 
+            this.time2Label.AutoSize = true;
+            this.time2Label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time2Label.Location = new System.Drawing.Point(352, 104);
+            this.time2Label.Name = "time2Label";
+            this.time2Label.Size = new System.Drawing.Size(35, 13);
+            this.time2Label.TabIndex = 2;
+            this.time2Label.Text = "label4";
             // 
             // mistakeLabel2
             // 
             this.mistakeLabel2.AutoSize = true;
-            this.mistakeLabel2.Location = new System.Drawing.Point(290, 224);
+            this.mistakeLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mistakeLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mistakeLabel2.Location = new System.Drawing.Point(352, 197);
             this.mistakeLabel2.Name = "mistakeLabel2";
-            this.mistakeLabel2.Size = new System.Drawing.Size(51, 16);
+            this.mistakeLabel2.Size = new System.Drawing.Size(35, 13);
             this.mistakeLabel2.TabIndex = 7;
             this.mistakeLabel2.Text = "label3";
+            // 
+            // wordsCounterLabel2
+            // 
+            this.wordsCounterLabel2.AutoSize = true;
+            this.wordsCounterLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wordsCounterLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wordsCounterLabel2.Location = new System.Drawing.Point(352, 150);
+            this.wordsCounterLabel2.Name = "wordsCounterLabel2";
+            this.wordsCounterLabel2.Size = new System.Drawing.Size(35, 13);
+            this.wordsCounterLabel2.TabIndex = 4;
+            this.wordsCounterLabel2.Text = "label3";
+            // 
+            // time1Label
+            // 
+            this.time1Label.AutoSize = true;
+            this.time1Label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.time1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time1Label.Location = new System.Drawing.Point(28, 105);
+            this.time1Label.Name = "time1Label";
+            this.time1Label.Size = new System.Drawing.Size(122, 13);
+            this.time1Label.TabIndex = 1;
+            this.time1Label.Text = "Last time you were here:";
+            // 
+            // wordsCounterLabel1
+            // 
+            this.wordsCounterLabel1.AutoSize = true;
+            this.wordsCounterLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wordsCounterLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wordsCounterLabel1.Location = new System.Drawing.Point(28, 151);
+            this.wordsCounterLabel1.Name = "wordsCounterLabel1";
+            this.wordsCounterLabel1.Size = new System.Drawing.Size(78, 13);
+            this.wordsCounterLabel1.TabIndex = 3;
+            this.wordsCounterLabel1.Text = "You\'ve learned";
             // 
             // mistakeLabel1
             // 
             this.mistakeLabel1.AutoSize = true;
-            this.mistakeLabel1.Location = new System.Drawing.Point(84, 224);
+            this.mistakeLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mistakeLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mistakeLabel1.Location = new System.Drawing.Point(28, 198);
             this.mistakeLabel1.Name = "mistakeLabel1";
-            this.mistakeLabel1.Size = new System.Drawing.Size(99, 16);
+            this.mistakeLabel1.Size = new System.Drawing.Size(69, 13);
             this.mistakeLabel1.TabIndex = 6;
             this.mistakeLabel1.Text = "You\'ve made";
             // 
             // wordsCounterLabel3
             // 
             this.wordsCounterLabel3.AutoSize = true;
-            this.wordsCounterLabel3.Location = new System.Drawing.Point(358, 163);
+            this.wordsCounterLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wordsCounterLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wordsCounterLabel3.Location = new System.Drawing.Point(453, 149);
             this.wordsCounterLabel3.Name = "wordsCounterLabel3";
-            this.wordsCounterLabel3.Size = new System.Drawing.Size(59, 16);
+            this.wordsCounterLabel3.Size = new System.Drawing.Size(41, 13);
             this.wordsCounterLabel3.TabIndex = 5;
             this.wordsCounterLabel3.Text = "word(s)";
-            // 
-            // wordsCounterLabel2
-            // 
-            this.wordsCounterLabel2.AutoSize = true;
-            this.wordsCounterLabel2.Location = new System.Drawing.Point(290, 163);
-            this.wordsCounterLabel2.Name = "wordsCounterLabel2";
-            this.wordsCounterLabel2.Size = new System.Drawing.Size(51, 16);
-            this.wordsCounterLabel2.TabIndex = 4;
-            this.wordsCounterLabel2.Text = "label3";
-            // 
-            // wordsCounterLabel1
-            // 
-            this.wordsCounterLabel1.AutoSize = true;
-            this.wordsCounterLabel1.Location = new System.Drawing.Point(84, 163);
-            this.wordsCounterLabel1.Name = "wordsCounterLabel1";
-            this.wordsCounterLabel1.Size = new System.Drawing.Size(113, 16);
-            this.wordsCounterLabel1.TabIndex = 3;
-            this.wordsCounterLabel1.Text = "You\'ve learned";
-            // 
-            // time2Label
-            // 
-            this.time2Label.AutoSize = true;
-            this.time2Label.Location = new System.Drawing.Point(379, 86);
-            this.time2Label.Name = "time2Label";
-            this.time2Label.Size = new System.Drawing.Size(51, 16);
-            this.time2Label.TabIndex = 2;
-            this.time2Label.Text = "label4";
-            // 
-            // time1Label
-            // 
-            this.time1Label.AutoSize = true;
-            this.time1Label.Location = new System.Drawing.Point(73, 86);
-            this.time1Label.Name = "time1Label";
-            this.time1Label.Size = new System.Drawing.Size(175, 16);
-            this.time1Label.TabIndex = 1;
-            this.time1Label.Text = "Last time you were here:";
-            // 
-            // hiLabel
-            // 
-            this.hiLabel.AutoSize = true;
-            this.hiLabel.Location = new System.Drawing.Point(290, 27);
-            this.hiLabel.Name = "hiLabel";
-            this.hiLabel.Size = new System.Drawing.Size(27, 16);
-            this.hiLabel.TabIndex = 0;
-            this.hiLabel.Text = "Hi!";
             // 
             // Dictionary
             // 
@@ -215,9 +238,9 @@ partial class MainForm
             // wordsFromDictionary
             // 
             this.wordsFromDictionary.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wordsFromDictionary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wordsFromDictionary.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.wordsFromDictionary.FormattingEnabled = true;
-            this.wordsFromDictionary.ItemHeight = 16;
+            this.wordsFromDictionary.ItemHeight = 18;
             this.wordsFromDictionary.Location = new System.Drawing.Point(0, 0);
             this.wordsFromDictionary.Name = "wordsFromDictionary";
             this.wordsFromDictionary.Size = new System.Drawing.Size(653, 262);
@@ -225,6 +248,7 @@ partial class MainForm
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.filterLanguageComboBox);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.selectLanguageComboBox);
@@ -241,39 +265,40 @@ partial class MainForm
             this.filterLanguageComboBox.FormattingEnabled = true;
             this.filterLanguageComboBox.Items.AddRange(new object[] {
             "All"});
-            this.filterLanguageComboBox.Location = new System.Drawing.Point(243, 81);
+            this.filterLanguageComboBox.Location = new System.Drawing.Point(280, 70);
             this.filterLanguageComboBox.Name = "filterLanguageComboBox";
-            this.filterLanguageComboBox.Size = new System.Drawing.Size(121, 24);
+            this.filterLanguageComboBox.Size = new System.Drawing.Size(169, 24);
             this.filterLanguageComboBox.TabIndex = 6;
             this.filterLanguageComboBox.SelectedIndexChanged += new System.EventHandler(this.filterLanguageComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 89);
+            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 16);
+            this.label1.Size = new System.Drawing.Size(262, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "Show words from language(s):";
             // 
             // selectLanguageComboBox
             // 
-            this.selectLanguageComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectLanguageComboBox.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.selectLanguageComboBox.FormattingEnabled = true;
-            this.selectLanguageComboBox.Location = new System.Drawing.Point(226, 41);
+            this.selectLanguageComboBox.Location = new System.Drawing.Point(280, 29);
             this.selectLanguageComboBox.Name = "selectLanguageComboBox";
-            this.selectLanguageComboBox.Size = new System.Drawing.Size(152, 24);
+            this.selectLanguageComboBox.Size = new System.Drawing.Size(169, 26);
             this.selectLanguageComboBox.TabIndex = 4;
             this.selectLanguageComboBox.Text = "Choose Language";
             // 
             // AddButton
             // 
             this.AddButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AddButton.Location = new System.Drawing.Point(402, 38);
+            this.AddButton.Location = new System.Drawing.Point(469, 27);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(134, 27);
+            this.AddButton.Size = new System.Drawing.Size(146, 29);
             this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = false;
@@ -281,17 +306,19 @@ partial class MainForm
             // 
             // insertWordTextBox
             // 
-            this.insertWordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.insertWordTextBox.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.insertWordTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.insertWordTextBox.Location = new System.Drawing.Point(25, 43);
+            this.insertWordTextBox.Location = new System.Drawing.Point(15, 30);
             this.insertWordTextBox.Name = "insertWordTextBox";
-            this.insertWordTextBox.Size = new System.Drawing.Size(185, 22);
+            this.insertWordTextBox.Size = new System.Drawing.Size(248, 26);
             this.insertWordTextBox.TabIndex = 0;
             this.insertWordTextBox.Text = "Type here word to insert";
             this.insertWordTextBox.Click += new System.EventHandler(this.insertWordTextBox_Click);
             // 
             // Exercises
             // 
+            this.Exercises.BackColor = System.Drawing.Color.Transparent;
+            this.Exercises.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Exercises.BackgroundImage")));
             this.Exercises.Controls.Add(this.buttonConstruct);
             this.Exercises.Controls.Add(this.buttonMatch);
             this.Exercises.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -300,16 +327,16 @@ partial class MainForm
             this.Exercises.Padding = new System.Windows.Forms.Padding(3);
             this.Exercises.Size = new System.Drawing.Size(661, 390);
             this.Exercises.TabIndex = 1;
-            this.Exercises.UseVisualStyleBackColor = true;
             // 
             // buttonConstruct
             // 
             this.buttonConstruct.BackColor = System.Drawing.Color.White;
-            this.buttonConstruct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonConstruct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConstruct.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonConstruct.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.buttonConstruct.Image = global::WindowsFormsApplication1.Properties.Resources.abc_block;
             this.buttonConstruct.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.buttonConstruct.Location = new System.Drawing.Point(350, 46);
+            this.buttonConstruct.Location = new System.Drawing.Point(372, 92);
             this.buttonConstruct.Name = "buttonConstruct";
             this.buttonConstruct.Size = new System.Drawing.Size(207, 164);
             this.buttonConstruct.TabIndex = 1;
@@ -321,11 +348,12 @@ partial class MainForm
             // buttonMatch
             // 
             this.buttonMatch.BackColor = System.Drawing.Color.White;
-            this.buttonMatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMatch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMatch.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.buttonMatch.Image = global::WindowsFormsApplication1.Properties.Resources.rating_1_;
             this.buttonMatch.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.buttonMatch.Location = new System.Drawing.Point(55, 46);
+            this.buttonMatch.Location = new System.Drawing.Point(77, 92);
             this.buttonMatch.Name = "buttonMatch";
             this.buttonMatch.Size = new System.Drawing.Size(205, 164);
             this.buttonMatch.TabIndex = 0;
@@ -336,39 +364,45 @@ partial class MainForm
             // 
             // Languages
             // 
+            this.Languages.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Languages.BackgroundImage")));
             this.Languages.Controls.Add(this.label2);
             this.Languages.Controls.Add(this.listBoxLanguages);
             this.Languages.Controls.Add(this.AddLanguageButton);
             this.Languages.Controls.Add(this.insertLanguageComboBox);
             this.Languages.Location = new System.Drawing.Point(4, 9);
             this.Languages.Name = "Languages";
-            this.Languages.Size = new System.Drawing.Size(661, 390);
+            this.Languages.Size = new System.Drawing.Size(661, 393);
             this.Languages.TabIndex = 3;
             this.Languages.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 128);
+            this.label2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(3, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 16);
+            this.label2.Size = new System.Drawing.Size(208, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "List of added languages:";
             // 
             // listBoxLanguages
             // 
+            this.listBoxLanguages.BackColor = System.Drawing.Color.White;
+            this.listBoxLanguages.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listBoxLanguages.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBoxLanguages.FormattingEnabled = true;
-            this.listBoxLanguages.ItemHeight = 16;
-            this.listBoxLanguages.Location = new System.Drawing.Point(0, 147);
+            this.listBoxLanguages.ItemHeight = 18;
+            this.listBoxLanguages.Location = new System.Drawing.Point(0, 137);
             this.listBoxLanguages.Name = "listBoxLanguages";
-            this.listBoxLanguages.Size = new System.Drawing.Size(640, 244);
+            this.listBoxLanguages.Size = new System.Drawing.Size(661, 256);
             this.listBoxLanguages.TabIndex = 2;
             // 
             // AddLanguageButton
             // 
             this.AddLanguageButton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.AddLanguageButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddLanguageButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AddLanguageButton.Location = new System.Drawing.Point(208, 44);
+            this.AddLanguageButton.Location = new System.Drawing.Point(244, 42);
             this.AddLanguageButton.Name = "AddLanguageButton";
             this.AddLanguageButton.Size = new System.Drawing.Size(174, 28);
             this.AddLanguageButton.TabIndex = 1;
@@ -380,18 +414,10 @@ partial class MainForm
             // 
             this.insertLanguageComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.insertLanguageComboBox.FormattingEnabled = true;
-            this.insertLanguageComboBox.Location = new System.Drawing.Point(208, 78);
+            this.insertLanguageComboBox.Location = new System.Drawing.Point(244, 76);
             this.insertLanguageComboBox.Name = "insertLanguageComboBox";
             this.insertLanguageComboBox.Size = new System.Drawing.Size(174, 24);
             this.insertLanguageComboBox.TabIndex = 0;
-            // 
-            // Options
-            // 
-            this.Options.Location = new System.Drawing.Point(4, 9);
-            this.Options.Name = "Options";
-            this.Options.Size = new System.Drawing.Size(661, 390);
-            this.Options.TabIndex = 2;
-            this.Options.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -402,23 +428,22 @@ partial class MainForm
             this.homeToolStripMenuItem,
             this.dictionaryToolStripMenuItem,
             this.exercisesToolStripMenuItem,
-            this.languagesToolStripMenuItem,
-            this.optionsToolStripMenuItem});
+            this.languagesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(669, 78);
+            this.menuStrip1.Size = new System.Drawing.Size(669, 75);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.AutoSize = false;
-            this.homeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.homeToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.homeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.homeToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.home_icon_silhouette_1_;
             this.homeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(132, 70);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(160, 70);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
@@ -426,13 +451,13 @@ partial class MainForm
             // dictionaryToolStripMenuItem
             // 
             this.dictionaryToolStripMenuItem.AutoSize = false;
-            this.dictionaryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dictionaryToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Info;
+            this.dictionaryToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dictionaryToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.dictionaryToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.book;
             this.dictionaryToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.dictionaryToolStripMenuItem.Name = "dictionaryToolStripMenuItem";
             this.dictionaryToolStripMenuItem.ShowShortcutKeys = false;
-            this.dictionaryToolStripMenuItem.Size = new System.Drawing.Size(122, 70);
+            this.dictionaryToolStripMenuItem.Size = new System.Drawing.Size(160, 70);
             this.dictionaryToolStripMenuItem.Text = "Dictionary";
             this.dictionaryToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.dictionaryToolStripMenuItem.Click += new System.EventHandler(this.dictionaryToolStripMenuItem_Click);
@@ -440,12 +465,12 @@ partial class MainForm
             // exercisesToolStripMenuItem
             // 
             this.exercisesToolStripMenuItem.AutoSize = false;
-            this.exercisesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.exercisesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Info;
+            this.exercisesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exercisesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.exercisesToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.barbell;
             this.exercisesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.exercisesToolStripMenuItem.Name = "exercisesToolStripMenuItem";
-            this.exercisesToolStripMenuItem.Size = new System.Drawing.Size(132, 70);
+            this.exercisesToolStripMenuItem.Size = new System.Drawing.Size(160, 70);
             this.exercisesToolStripMenuItem.Text = "Exercises";
             this.exercisesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.exercisesToolStripMenuItem.Click += new System.EventHandler(this.exercisesToolStripMenuItem_Click);
@@ -453,28 +478,32 @@ partial class MainForm
             // languagesToolStripMenuItem
             // 
             this.languagesToolStripMenuItem.AutoSize = false;
-            this.languagesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.languagesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Info;
+            this.languagesToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.languagesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuBar;
             this.languagesToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.language_1_;
             this.languagesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.languagesToolStripMenuItem.Name = "languagesToolStripMenuItem";
-            this.languagesToolStripMenuItem.Size = new System.Drawing.Size(120, 70);
+            this.languagesToolStripMenuItem.Size = new System.Drawing.Size(160, 70);
             this.languagesToolStripMenuItem.Text = "Languages";
             this.languagesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.languagesToolStripMenuItem.Click += new System.EventHandler(this.languagesToolStripMenuItem_Click);
             // 
-            // optionsToolStripMenuItem
+            // label42
             // 
-            this.optionsToolStripMenuItem.AutoSize = false;
-            this.optionsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.optionsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Info;
-            this.optionsToolStripMenuItem.Image = global::WindowsFormsApplication1.Properties.Resources.screwdriver_and_wrench_crossed;
-            this.optionsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(120, 70);
-            this.optionsToolStripMenuItem.Text = "Options";
-            this.optionsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(453, 104);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(52, 16);
+            this.label42.TabIndex = 9;
+            this.label42.Text = "label3";
+            // 
+            // Options
+            // 
+            this.Options.Location = new System.Drawing.Point(4, 9);
+            this.Options.Name = "Options";
+            this.Options.Size = new System.Drawing.Size(661, 393);
+            this.Options.TabIndex = 2;
+            this.Options.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -508,7 +537,6 @@ partial class MainForm
     private System.Windows.Forms.TabControl tabControl1;
     private System.Windows.Forms.TabPage Dictionary;
     private System.Windows.Forms.TabPage Exercises;
-    private System.Windows.Forms.TabPage Options;
     private System.Windows.Forms.TabPage Languages;
     private System.Windows.Forms.Panel panel2;
     private System.Windows.Forms.ListBox wordsFromDictionary;
@@ -524,7 +552,6 @@ partial class MainForm
     private System.Windows.Forms.ToolStripMenuItem dictionaryToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem exercisesToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem languagesToolStripMenuItem;
-    private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.ComboBox filterLanguageComboBox;
     private System.Windows.Forms.Button buttonConstruct;
@@ -540,4 +567,6 @@ partial class MainForm
     private System.Windows.Forms.Label mistakeLabel3;
     private System.Windows.Forms.Label mistakeLabel2;
     private System.Windows.Forms.Label mistakeLabel1;
+    private System.Windows.Forms.Label label42;
+    private System.Windows.Forms.TabPage Options;
 }

@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.Forms
         private bool isClickeable = true;
 
         string word = "";
-        private const int sizeOfButton = 30;
+        private const int sizeOfButton = 40;
         Button[] buttonArray;
         bool if_word_is_correct = true;
         public static int counter = 0;
@@ -70,19 +70,37 @@ namespace WindowsFormsApplication1.Forms
             labelWordToTranslate.Text = wordService.getWordById(translationForTestList.word_id_1);
             setLettersOnButtons();
         }
-
+        public static string Shuffle(string str)
+        {
+            char[] array = str.ToCharArray();
+            Random rng = new Random();
+            int n = array.Length;
+            while(n>1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                var value = array[k];
+                array[k] = array[n];
+                array[n] = value;
+            }
+            return new string(array);
+        }
         private void setLettersOnButtons()
         {
             string wordOnLettrs = wordService.getWordById(translationForTestList.word_id_2);
-            int n = wordOnLettrs.Length;
+            string wordOnLettrsShuf = Shuffle(wordOnLettrs);
+
+
+            int n = wordOnLettrsShuf.Length;
             this.buttonArray = new Button[n];
-            char[] chars = wordOnLettrs.ToCharArray();
+            char[] chars = wordOnLettrsShuf.ToCharArray();
+            
             for (int j = 0; j < n; j++)
             {
                 Button bt = new Button();
                 bt.Click += bt_Click;
                 bt.Size = new Size(sizeOfButton, sizeOfButton);
-                bt.Location = new Point(j * 30, 1);
+                bt.Location = new Point(j * sizeOfButton, 1);
                 bt.Text = chars[j].ToString();
                 bt.Name = chars[j].ToString();
                 this.panel1.Controls.Add(bt);
@@ -94,6 +112,7 @@ namespace WindowsFormsApplication1.Forms
                 buttonArray[j].Name = chars[j].ToString();
             }
 
+
         }
         void bt_Click(object sender, EventArgs e)
         {
@@ -101,7 +120,7 @@ namespace WindowsFormsApplication1.Forms
             Button b = sender as Button;
             this.buttonArray[counter] = b;
 
-            b.Location = new Point(counter * 30, 1);
+            b.Location = new Point(counter * sizeOfButton, 1);
             b.Enabled = false;
             counter++;
             this.panel2.Controls.Add(b);
@@ -121,22 +140,27 @@ namespace WindowsFormsApplication1.Forms
                 
                 if (chars[i].ToString() != buttonArray[i].Text)
                 {
-                    panel2.BackColor = Color.Red;
+                    panel2.BackColor = Color.LightPink;
                     if_word_is_correct = false;
-                    return;
+                    //return;
                 }
             }
             if (if_word_is_correct)
             {
-                panel2.BackColor = Color.Green;
-                translationForTestList.retry_count = (short)(translationForTestList.retry_count + 1);
+                panel2.BackColor = Color.LightGreen;
+                translationForTestList.retry_count = (short)(translationForTestList.retry_count + 2);
             }
             //else
-                //translationForTestList.retry_count = (short)(translationForTestList.retry_count + 1);
+                //translationForTestList.retry_count = (short)(translationForTestList.retry_count - 1);
 
             translationForTestList.last_attempt_timestamp = DateTime.Now;
             translationDBservice.update(translationForTestList);
             if_word_is_correct = true;
+        }
+
+        private void buttonQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

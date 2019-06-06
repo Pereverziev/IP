@@ -516,3 +516,95 @@ C:\Data\July\STUDY\Project\конструктор слов\IPV\IPV\IP\WindowsFor
 C:\Data\July\STUDY\Project\конструктор слов\IPV\IPV\IP\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
 C:\Data\July\STUDY\Project\конструктор слов\IPV\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
 C:\Programming\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Forms.WordConstructorForm.resources
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Database.mdf
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\DBClasses.designer.cs
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml.layout
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.dll
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.pdb
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.pdb
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.pdb
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.pdb
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.pdb
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.pdb
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\ExerciseForm.resources
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\NativeLanguageSelectForm.resources
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\MainForm.resources
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Forms.WordConstructorForm.resources
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Data\July\PROJECTfinal\IPV (2)\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Database.mdf
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Database_log.ldf
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\DBClasses.designer.cs
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\DBClasses.dbml.layout
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.dll
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Api.Gax.Rest.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Auth.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Core.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Apis.Translate.v2.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.pdb
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Google.Cloud.Translation.V2.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\Newtonsoft.Json.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\bin\Debug\System.Interactive.Async.xml
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\ExerciseForm.resources
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\NativeLanguageSelectForm.resources
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\MainForm.resources
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Forms.WordConstructorForm.resources
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\Project.csproj.CopyComplete
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Programming\IPNew\IPV\IP\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

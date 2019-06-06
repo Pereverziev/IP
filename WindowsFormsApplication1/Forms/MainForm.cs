@@ -35,7 +35,7 @@ public partial class MainForm : Form
         isInternetAccess = checkInternetConnection();
         if (isInternetAccess)
         {
-            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Programming\\Inzenyria_programowania-ce5078cd8d32.json");
+            System.Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", "C:\\Programming\\IPNew\\IPV\\IP\\Inzenyria_programowania-ce5078cd8d32.json");
             client = Google.Cloud.Translation.V2.TranslationClient.Create();
             googleTranslate = new TranslationAPIService(client);
             foreach (Google.Cloud.Translation.V2.Language language in client.ListLanguages("en"))
@@ -64,6 +64,7 @@ public partial class MainForm : Form
         mistakeLabel1.Font = new Font(mistakeLabel1.Font.FontFamily, 20);
         mistakeLabel2.Font = new Font(mistakeLabel2.Font.FontFamily, 20);
         mistakeLabel3.Font = new Font(mistakeLabel3.Font.FontFamily, 20);
+        label42.Font = new Font(label42.Font.FontFamily, 20);
         checkIfItIsFirstRun();
         initializeLanguageListBox();
         ICollection<Word> wordList = wordService.getAll();
@@ -114,6 +115,11 @@ public partial class MainForm : Form
 
     private void AddButton_Click(object sender, EventArgs e)
     {
+        if (!isInternetAccess)
+        {
+            MessageBox.Show("Looks like you don't have internet connection, please try later.");
+            return;
+        }
         String translatedWordString = googleTranslate.translateWord(insertWordTextBox.Text, nativeLanguage.shortTitle);
         if (translatedWordString.Equals(insertWordTextBox.Text))
         {
@@ -287,7 +293,9 @@ public partial class MainForm : Form
 
     private void setPropertiesFromDBtoLabels()
     {
-        time2Label.Text = getDifferenceBetweenDays(applicationSettingsService.getLastVisitTime());
+        String[] response = getDifferenceBetweenDays(applicationSettingsService.getLastVisitTime()).Split(' ');
+        time2Label.Text = response[0];
+        label42.Text = response[1] + " " + response[2];
         wordsCounterLabel2.Text = applicationSettingsService.getLearnedWordsCounter().ToString();
         mistakeLabel2.Text = applicationSettingsService.getMistakeCounter().ToString();
     }
